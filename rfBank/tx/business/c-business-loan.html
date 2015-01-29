@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=1280,height=1024, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+		<link rel="stylesheet" href="../../css/header.css" />
+			<link rel="stylesheet" href="c-business-loan.css" />
+			<script type="text/javascript" src="../../script/jquery-1.8.3.js"></script>
+						<script type="text/javascript" src="c-business-loan.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				$(".header > div.button").click(function() {
+					rexseeBrowser.dismiss();
+				});
+						$('.tableTime li').click(function() {
+		$(this).css("color", "#FFFFFF"); //还原所有td的颜色
+		//              $(this).click(function(){
+		//                  $(this).css("background-color","red");//设置点击td的颜色
+		//              });#FFFFFF
+		$('.tableTime li').not(this).css("color", "black");
+	});
+			});
+		</script>
+		<title></title>
+	</head>
+
+	<body>
+		<div class="header">
+			<div class="title">
+				<div>贷款业务</div>
+			</div>
+			<div class="button">
+				<div id="btnExitTx">
+					<span>关闭</span>
+					<img src="../../img/icon-right.png" />
+				</div>
+			</div>
+		</div>
+		
+		<div class="content"   >
+			<div class="c-business-menu" style="float: left;overflow: scroll;">
+
+				<ul class="tableTime">
+					<li data-url="file:///android_asset/tx/business/loan-detail/loan1.html" style="color: #FFFFFF;">
+						<!--<img src="../../img/tx-icon/ebank.png"  style="float: left;"/>-->土地承包经营权流转贷款
+					</li>
+						<li data-url="file:///android_asset/tx/business/loan-detail/loan2.html">
+							<!--<img src="../../img/tx-icon/regec.png" />-->“商标专用权”质押贷款
+									</li>
+							<li data-url="file:///android_asset/tx/business/loan-detail/loan3.html">
+								<!--<img src="../../img/tx-icon/cpay.png" />-->“小企业联保”贷款
+										</li>
+								<li data-url="file:///android_asset/tx/business/loan-detail/loan4.html">
+								<!--<img src="../../img/tx-icon/cpay.png" />-->经济适用房开发贷款
+										</li>
+								<li data-url="file:///android_asset/tx/business/loan-detail/loan5.html">
+								<!--<img src="../../img/tx-icon/cpay.png" />-->市场客户信用贷款
+										</li>
+									<li data-url="file:///android_asset/tx/business/loan-detail/loan6.html">
+								<!--<img src="../../img/tx-icon/cpay.png" />-->物业通贷款
+										</li>
+									<li data-url="file:///android_asset/tx/business/loan-detail/loan7.html">
+								<!--<img src="../../img/tx-icon/cpay.png" />-->保函业务
+										</li>
+									<li data-url="file:///android_asset/tx/business/loan-detail/loan8.html">
+								<!--<img src="../../img/tx-icon/cpay.png" />-->股权质押贷款
+										</li>
+											<li data-url="file:///android_asset/tx/business/loan-detail/loan9.html">
+											排污权抵押贷款
+										</li>
+											<li data-url="file:///android_asset/tx/business/loan-detail/loan10.html">
+											委托贷款业务
+										</li>
+											<li data-url="file:///android_asset/tx/business/loan-detail/loan11.html">
+											房地产开发贷款
+										</li>
+											<li data-url="file:///android_asset/tx/business/loan-detail/loan12.html">
+											“商户通”贷款
+										</li>
+											<li data-url="file:///android_asset/tx/business/loan-detail/loan13.html">
+											“随贷宝”贷款
+										</li>
+											<li data-url="file:///android_asset/tx/business/loan-detail/loan14.html">
+											小企业贷款
+										</li>
+											<li data-url="file:///android_asset/tx/business/loan-detail/loan15.html">
+											固定资产贷款
+										</li>
+											<li data-url="file:///android_asset/tx/business/loan-detail/loan16.html">
+											流动资金贷款
+										</li>
+				</ul>
+			</div>
+			<div style="overflow: scroll;" >
+				<iframe class="iframe" src="file:///android_asset/tx/business/loan-detail/loan1.html"  frameborder="0" ></iframe>
+			</div>
+		</div>
+	</body>
+</html>

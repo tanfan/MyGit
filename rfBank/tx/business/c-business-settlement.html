@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=1280,height=1024, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+		<link rel="stylesheet" href="../../css/header.css" />
+			<link rel="stylesheet" href="c-business-loan.css" />
+			<script type="text/javascript" src="../../script/jquery-1.8.3.js"></script>
+						<script type="text/javascript" src="c-business-loan.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				$(".header > div.button").click(function() {
+					rexseeBrowser.dismiss();
+				});
+						$('.tableTime li').click(function() {
+		$(this).css("color", "#FFFFFF"); //还原所有td的颜色
+		//              $(this).click(function(){
+		//                  $(this).css("background-color","red");//设置点击td的颜色
+		//              });#FFFFFF
+		$('.tableTime li').not(this).css("color", "black");
+	});
+			});
+		</script>
+		<title></title>
+	</head>
+
+	<body>
+		<div class="header">
+			<div class="title">
+				<div>存款业务</div>
+			</div>
+			<div class="button">
+				<div id="btnExitTx">
+					<span>关闭</span>
+					<img src="../../img/icon-right.png" />
+				</div>
+			</div>
+		</div>
+		
+		<div class="content"   >
+			<div class="c-business-menu" style="float: left;overflow: scroll;">
+
+				<ul class="tableTime">
+											<li data-url="file:///android_asset/tx/business/settletment-detail/settlement1.html" style="color: #FFFFFF;">
+											人民币单位协定存款
+										</li>
+											<li data-url="file:///android_asset/tx/business/settletment-detail/settlement2.html">
+											异地委托收款
+										</li>
+											<li data-url="file:///android_asset/tx/business/settletment-detail/settlement3.html">
+											电子汇兑
+										</li>
+											<li data-url="file:///android_asset/tx/business/settletment-detail/settlement4.html">
+											银行汇票
+										</li>
+				</ul>
+			</div>
+			<div style="overflow: scroll;" >
+				<iframe class="iframe" src="file:///android_asset/tx/business/settletment-detail/settlement1.html"  frameborder="0" ></iframe>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=960,height=600, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+		<link rel="stylesheet" href="../../css/tx.css" />
+		
+		<script type="text/javascript" src="../../script/jquery-1.8.3.js"></script>
+		<script type="text/javascript" src="../../script/echarts/echarts-plain.js"></script> 
+		<script type="text/javascript" src="../../script/page.js" ></script>
+		<script type="text/javascript" src="../../script/tx.min.js" ></script>
+	
+		<title>采集结果</title>
+				<script>
+			txPage.onNext=function(){
+				return true;
+			}
+			txPage.onPre=function(){
+				return true;
+			}
+		</script>
+<style>
+		.bottom button{
+				padding: 10px;
+				font-size: 24px;
+			}
+			
+			.content > div.devlist{
+				display: block;
+				width: 70%;
+				height: 90%;
+				float:left;
+				
+			}
+			.content > div.devlist > div >button{
+				padding: 10px;
+				font-size: 15px;
+			} 
+			.devlist ul{
+				list-style: none;
+				margin: 0px;padding: 10px;
+			}
+			.devlist li{
+				list-style: none;
+				margin: 2px;
+				padding: 0px;
+				display: inline-block;
+				height: 100px;
+				width: 100px;
+				white-space:nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				text-align: center;
+				line-height: 100px;
+				
+				background-image: -webkit-gradient(linear, center top, center bottom, from(deepskyblue), to(lightgreen));
+				border-radius: 21px 21px 21px 21px;
+			}
+			.dev-selected{
+				box-shadow: 0px 0px 10px blue;
+			}
+	</style>
+	</head>
+		<body data-PrePage="file:///android_asset/tx/Info/personInfo.html" data-NextPage="file:///android_asset/tx/Info/distrub.html" scroll=no style="overflow:auto">
+		<div class="header">
+			<div class="title">
+				<div>采集信息结果</div>
+			</div>
+			<div class="button">
+				<div id="btnExitTx">
+					<span>关闭</span>
+					<img src="../../img/icon-right.png" />
+				</div>
+			</div>
+		</div>
+					
+			<div class="buttonbar">
+			<button class="pre"></button>
+			<button class="next"></button>	
+		</div>
+
+
+		<div class="content" style="height: 80%;overflow: hidden;">
+			<div class="devlist" style="float:left;">
+				 <fieldset style="height:96%;-webkit-border-radius: 5px">
+	    	<legend>结果分析</legend>
+				<div class="tab1">
+				<p>	<table border="1" >
+						<tr>
+						  <th>指标名称</th>
+						  <th>反应能力</th>
+						  <th>合理区间</th>
+						  <th>您的比率</th>
+						  <th>健康指数</th>
+						  <th>理财师点评</th>
+						</tr>
+						<tr align=center>
+						  <td>负债率</td>
+						  <td>总负债/总资产</td>
+						  <td>20%~50%</td>
+						  <td></td>
+						  <td></td>
+						  <td></td>
+						</tr>
+						<tr align=center>
+						  <td>支出率</td>
+						  <td>总支出/总收入</td>
+						  <td>20%~40%</td>
+						  <td></td>
+						  <td></td>
+						  <td></td>
+						</tr>
+						<tr align=center>
+						  <td>流动性比率</td>
+						  <td>流动性资产/每月支出</td>
+						  <td>3~6</td>
+						  <td></td>
+						  <td></td>
+						  <td></td>
+						</tr>
+						<tr align=center>
+						  <td>净资产偿付率</td>
+						  <td>您的消费支出情况</td>
+						  <td>50%~75%</td>
+						  <td></td>
+						  <td></td>
+						  <td></td>
+						</tr>
+						<tr align=center>
+						  <td>净储蓄率</td>
+						  <td>净储蓄/总收入</td>
+						  <td>30%~70%</td>
+						  <td></td>
+						  <td></td>
+						  <td></td>
+						</tr>
+						</table>
+						</p>			
+				</div>
+				<div class="pic1">
+					<div class="active">
+				<!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+						<div id="main" style="height:150px;">
+							
+						</div>		
+						<script type="text/javascript">
+						function showChar(){
+							$("#main").css("height",$(".content").height());
+							var myChart = echarts.init(document.getElementById('main'));
+							var option = {
+							    title : {
+							        text: '图表数据分析',
+							    },						
+							    legend: {
+							        orient : 'vertical',
+							        x : 'right',
+							        y : 'top',
+							        data:['健康指数','您的比率','合理区域'],
+							        center:['75%',100],
+							    },
+							    polar : [
+							       {
+							           indicator : [
+							               { text: '负债', max: 100},
+							               { text: '支出', max: 100},
+							               { text: '流动性比率', max: 100},
+							               { text: '净资产偿付比率', max: 100},
+							               { text: '储蓄', max: 100},
+							            ],
+							            center:['50%',120],
+							            radius:80,
+							        }
+							    ],
+							    calculable : true,
+							    series : [
+							        {
+							            name: '图表数据分析',
+							            type: 'radar',
+							         itemStyle: {
+							                normal: {
+							                    areaStyle: {
+							                        type: 'default'
+							                    }
+							                }
+							            },
+							            data : [
+							              
+							                {
+							                    value : [10, 20, 30, 10, 10],
+							                    name : '健康指数'
+							                },
+							                 {
+							                    value : [0.02, 0, 15, 99.99, 0],
+							                    name : '您的比率'
+							                },  {
+							                    value : [100, 100, 100, 100, 100],
+							                    name : '合理区域'
+							                },
+							            ]
+							        }
+							    ]
+							};
+							// 为echarts对象加载数据
+							myChart.setOption(option);
+							}
+									
+							$(function(){
+								$(window).resize(showChar);
+								showChar();
+								});
+						</script>
+					</div>
+				</div></fieldset>
+			</div>
+			
+			<div class="rightMeun" style="width:29%;height:90%;float:right;overflow: hidden;">
+				<fieldset style="height: 96%;overflow: auto;-webkit-border-radius: 5px">
+					<legend>理财建议模块</legend>
+					<div class="sug" style="overflow: auto;">
+					
+					<p>一、财务分析</p>
+					<p>1.风险保障不足：只投保了大病医疗保险，保险保障比较单一。</p>
+					<p>2.家庭日常开支过大：您的家庭的年支出占年收入的72%，比例偏高，您可以考虑是否存在节流的可能性，节约不必要的生活开支，注重财富的积累，以实现自己的理财目标。</p>
+					<p>3.家庭资产结构单一：您的家庭资产状况虽然具有高度的安全性，蛋结构上不合理，主要以自用房产喂猪，另外金融资产以定期存款为主，由于您的流动性比率达到16倍，说明您的流动性资产收益普遍不高，因此可以适当降低家庭流动资产比率，以获得更好的投资收益。</p>
+					<p>4.财产结构不合理：净资产偿付比例为81%，说明您没有充分利用自己的信用额度。</p>
+					<p>二、财务计划</p>
+					<p>1.紧急预备金</p>
+					<p>紧急预备金是为了满足家庭对资产的流动性需求，一般应准备3-6个月的家庭固定开支，考虑到有子女、房产还贷以及赡养老人等因素，建议拿出1万元定期存款转活期存款和货币基金座位紧急预备金，同时申请一张我行信用卡，利用信用卡额度补充紧急预备金，以备不时之需。</p>
+					<p>2.家庭保险计划</p>
+					<p>。。。</p>
+					
+					</div>
+				</fieldset>
+			</div>
+		</div>
+
+
+</body>
+		
+</html>

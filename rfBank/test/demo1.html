@@ -1,0 +1,142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>DEMO</title>
+<link rel="stylesheet" type="text/css"  href="stylesheet/stylesheet.css" />
+<script type="text/javascript" src="script/jquery-1.3.2.min.js"></script>
+<script type="text/javascript" src="script/swipe.js"></script>
+<style>
+#slider{ width:100%;height:100%;padding:0px;}
+.swipe {
+  overflow: hidden;
+  visibility: hidden;
+  position: relative;
+}
+.swipe-wrap {
+  overflow: hidden;
+  position: relative;width:100%;height:100%;padding:0px;
+}
+.swipe-wrap > .wrap {
+  float:left;
+  width:100%;
+  position: relative;
+  height:100%;
+}
+
+.swipe-wrap > .wrap  {
+  float:left;
+  width:100%;
+  position: relative;
+  height:100%;
+  }
+
+.swipe-wrap > .wrap ul{
+	list-style: none;
+	padding: 20px;
+}
+
+.swipe-wrap > .wrap ul > li{
+
+	text-align: center;
+	display: inline-block;
+	width: 80px;
+	height: 110px;
+	margin: 10px;
+	
+	text-shadow: 0px 0px 2px silver;
+	font-weight: bold;
+	border: solid 2px #FFFFFF;
+	-webkit-border-radius: 20px;
+}
+.swipe-wrap > .wrap ul > li > img{
+	width: 80px;
+	/*box-shadow: 2px 3px 3px silver;*/
+	margin-bottom: 10px;
+	-webkit-border-radius: 20px;
+	
+	-webkit-box-shadow: 0 0 1px #cfcfcf; 
+	
+}
+
+/* END required styles */
+
+</style>
+
+</head>
+
+<body>
+  <div id="slider" class="swipe">
+    <div  class="swipe-wrap">
+        <div class="wrap">
+        	<ul>
+        		<li data-url="file:///android_asset/Demo01.html"><img src="img/HBuilder.png"  />Demo01</li>
+        		<li data-url="file:///android_asset/test.html"><img src="img/HBuilder.png"  />test</li>
+        		<li data-url="file:///android_asset/demo.html"><img src="img/HBuilder.png" />DEMO</li>
+        		<li data-url="close"><img src="img/HBuilder.png" />关闭</li>
+        		<li><img src="img/HBuilder.png" />菜单5</li>
+        		<li><img src="img/HBuilder.png" />菜单1</li>
+        		<li><img src="img/HBuilder.png" />菜单2</li>
+        		<li><img src="img/HBuilder.png" />菜单3</li>
+        		<li><img src="img/HBuilder.png" />菜单4</li>
+        		<li><img src="img/HBuilder.png" />菜单5</li>
+        	</ul>
+        </div>
+        <div class="wrap" col>
+        <ul>
+        		<li><img src="img/HBuilder.png" />菜单1</li>
+        		<li><img src="img/HBuilder.png" />菜单2</li>
+        		<li><img src="img/HBuilder.png" />菜单3</li>
+        		<li><img src="img/HBuilder.png" />菜单4</li>
+        		<li><img src="img/HBuilder.png" />菜单5</li>
+        		
+        	</ul>
+        </div>
+		<div class="wrap">
+			<ul>
+        		<li><img src="img/HBuilder.png" />菜单1</li>
+        		<li><img src="img/HBuilder.png" />菜单2</li>
+        		<li><img src="img/HBuilder.png" />菜单3</li>
+        		<li><img src="img/HBuilder.png" />菜单4</li>
+        		<li><img src="img/HBuilder.png" />菜单5</li>
+        	</ul>
+		</div>
+      
+    </div>
+  </div>
+
+<script>
+
+var slider =
+  Swipe(document.getElementById('slider'), {
+    auto: 0, 
+    continuous: true,
+    callback: function(pos) {	
+	//$(".current_count").html(pos+1); //锟斤拷取锟斤拷前wrap锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷要锟斤拷1
+    }
+  });
+ 
+$(function(){
+	//$(".total_count").html($(".swipe-wrap .wrap").length);
+	 $(".pre").click(function(){
+		 slider.prev(); 
+   });
+    $(".next").click(function(){
+	      slider.next();
+   });
+	
+	$(".swipe-wrap > .wrap ul > li").click(function(){
+		if($(this).attr("data-url") == "close"){
+			rexseeBrowser.dismiss();
+			return;
+		}
+		if($(this).attr("data-url")!=null){
+		//rexseeTransition.load($(this).attr("data-url"),'animation-type:scale+alpha+rotate;animation-start-time:0;animation-duration:1000;animation-translate-x-from:0;animation-translate-x-to:-100;animation-translate-y-from:0;animation-translate-y-to:0;animation-scale-x-from:1;animation-scale-x-to:0;animation-scale-y-from:1;animation-scale-y-to:0;animation-alpha-from:100;animation-alpha-to:0;animation-rotate-from:-360;animation-rotate-to:0;animation-center-x:50;animation-center-y:50;');
+		rexseePopupWindow.show($(this).attr("data-url"),'browser-progress-dialog:visible;window-moveable:false;window-cancelable:true;window-modeless:true;window-dim-amount:1;window-style:transparent;window-animation:right;border-width:0px;window-align:center;window-vertical-align:middle;width:fillparent;height:fillparent;');
+		}
+	})
+	
+});
+rexseeLayoutStyle.setStyle('margin:0px;padding:0px;border-width:0px;');	 
+</script>
+</body></html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=1280,height=1024, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+		<title>页面模板</title>
+		<link rel="stylesheet" href="../css/page.css" />
+		<link rel="stylesheet" href="../css/index-lc-menu.css" />
+		<script type="text/javascript" src="../script/jquery-1.8.3.js" ></script>
+		<script type="text/javascript" src="../script/page.js" ></script>
+		<script type="text/javascript" >
+		$(function(){
+			$(".header > div.button").click(function(){
+				parentWindowEx.execute("hello(132)");
+				rexseeBrowser.dismiss();
+			});
+		});	
+									
+		</script>
+	</head>
+	<body  scroll=no style="overflow:hidden" >
+		<div class="header" >
+			<div class="title">
+				<div><img src="../img/icon-setting.png" /><span>设置</span></div>
+			</div>
+			<div class="button">
+				<div><span>完成</span><img src="../img/icon-right.png" /></div>
+			</div>
+		</div>
+		<div class="content lc-menu">
+					<div>理财产品
+						<ul>
+							<li><div><img src="../img/HBuilder.png"  /></div>债富</li>
+							<li><div><img src="../img/HBuilder.png"  /></div>乾元一供享型</li>
+							<li><div><img src="../img/HBuilder.png"  /></div>金钥匙 . 安心得利</li>
+							<li><div><img src="../img/HBuilder.png"  /></div>“鑫意”理财福通</li>
+							<li><div><img src="../img/HBuilder.png"  /></div>“聚财宝”组合类</li>
+						</ul>
+					</div>
+					<div>基金产品
+						<ul>
+							<li><div><img src="../img/HBuilder.png"  /></div>企债ETF</li>
+							<li><div><img src="../img/HBuilder.png"  /></div>万家利B</li>
+							<li><div><img src="../img/HBuilder.png"  /></div>南方中国</li>
+							<li><div><img src="../img/HBuilder.png"  /></div>建信创新中国</li>
+						</ul>
+					</div>
+					<div>保险产品
+						<ul>
+							<li><div><img src="../img/HBuilder.png"  /></div>99号重大疾病保险</li>
+							<li><div><img src="../img/HBuilder.png"  /></div>“七合一”保险计划</li>
+							<li><div><img src="../img/HBuilder.png"  /></div>“全方位”组合计划</li>
+							<li><div><img src="../img/HBuilder.png"  /></div>“宝贵年华”两全保险</li>
+						</ul>
+					</div>
+		</div>
+	</body>
+</html>

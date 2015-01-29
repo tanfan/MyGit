@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>读取身份证</title>
+		<script type="text/javascript" src="../script/jquery-1.8.3.js" ></script>
+		<script type="text/javascript" src="../script/asyncall.min.js" ></script>
+		<script type="text/javascript" src="../script/GgDevice.js" ></script>
+		<script>
+			function readCard() {
+
+				GgDev.printData("abc",function(rc) {
+					try {
+						alert(rc);
+						$("#cardInfo").text(rc);
+
+						var idcardinfo = $.parseJSON(rc);
+						if (idcardinfo.result != "success")
+							alert("读到身份证信息失败");
+						$("#idImg").attr('src', 'data:image/png;base64,' + idcardinfo.photo);
+						$("#idImg2").attr('src', idcardinfo.photoPath);
+
+						//$("#cardInfo").text(e.message);
+						alert(e.message);
+					} catch(e) {
+
+					}
+				});
+			}
+		</script>
+	</head>
+	<body>
+		<button onclick="rexseeBrowser.dismiss()">关闭</button>
+		<img id="idImg" src="data:image/png;base64,R0lGODlhDwAPAKECAAAAzMzM/////
+		wAAACwAAAAADwAPAAACIISPeQHsrZ5ModrLlN48CXF8m2iQ3YmmKqVlRtW4ML
+		wWACH+H09wdGltaXplZCBieSBVbGVhZCBTbWFydFNhdmVyIQAAOw==" />
+		<img id="idImg2" src="data:image/png;base64,R0lGODlhDwAPAKECAAAAzMzM/////
+		wAAACwAAAAADwAPAAACIISPeQHsrZ5ModrLlN48CXF8m2iQ3YmmKqVlRtW4ML
+		wWACH+H09wdGltaXplZCBieSBVbGVhZCBTbWFydFNhdmVyIQAAOw==" />
+		<button onclick="readCard()" >
+			打印
+		</button>
+		<div id="cardInfo"></div>
+	</body>
+</html>

@@ -1,0 +1,334 @@
+html{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+body{
+	width: 100%;
+	height: 100%;
+	padding: 0px;
+	margin: 0px;
+	overflow: hidden;
+	background-image: url(../img/back.png);
+	background-size: 1280px 1024px;
+}
+@media only screen and (max-width: 1280px) {
+		
+	.header {
+		width: 100%;
+		height: 97px;
+		background-image:url(../img/top-bg.png);
+		background-repeat: repeat-x;
+	}
+	.header > div{
+		height: 97px;
+		line-height:97px;
+		width: 110px;
+		float: right;
+		color: #FFFFFF;
+		font-size: 24px;
+		font-weight: bold;
+	}
+	.header div > div > img{
+		width: 32px;
+		margin: 13px 5px 17px 0px;
+		vertical-align:middle;
+	}
+	.header div >div:active{
+		opacity: 0.5;
+	}
+				
+	.content{
+		width: 100%;
+		/*height: -moz-calc(100% - 100px - 80px));
+		height: -webkit-calc(100% - 100px - 80px));*/
+		/*height: calc(100% - 100px - 80px);*/
+		/*height:420px;*/
+	}
+	
+	.menu{
+		width: 100%;
+		height: 77px;
+		background-image: url(../img/bottomBar-bg.png);
+		background-repeat: repeat-x;
+		text-align: center;
+	}
+	
+	.menu > div{
+		padding:  0 0 0 0;
+		margin:  0 0 0 0;
+		display:inline-block;
+	}
+	
+	.menu > div > div{
+		clear: all;
+		display:inline-block;
+		padding: 0 0 0 0;
+		margin:  0 0 0 0;
+		height: 77px;
+		line-height:77px;
+		color: #FFFFFF;
+		font-size: 18px;
+		/*text-shadow: 2px 2px 2px #000;*/
+		overflow: hidden;
+		float: left;
+	}
+	
+	.menu > div > div.barBtn{
+		width: 160px;
+	}
+	
+	.menu > div > div.barSplit{
+		width: 2px;
+	}
+	.menu > div > div.barBtn:active{
+		background-image: url(../img/btn-bg-active.png);
+		background-position-y: -80px;
+		background-size:160px 163px;
+		box-shadow: 0px 0px 20px #ff59b0;
+	}
+	
+	
+	.menu > div > div.barBtn > img{
+		width: 30px;
+		margin: 13px 5px 17px 0px;
+		vertical-align:middle;
+	}
+	
+	.menu > div > div.li-active{
+		background-image: url(../img/btn-bg-active.png);
+		background-position-y: -80px;
+		background-size:160px 163px;
+	 	box-shadow: 0px 0px 20px #ff59b0;
+		
+	}
+	
+	.swipe-wrap > .wrap> div  > div.homePage{
+		width: 100%;
+		max-width: 1000px;
+		text-align: center;
+		display:block;
+		overflow: hidden;
+		margin: 0px auto 0px auto;
+	}
+	.swipe-wrap > .wrap> div  > div.homePage img{
+		max-width: 1000px;
+	}
+	
+	.swipe-wrap > .wrap > div  > div.homePage >div{
+		width: 100%;
+		max-height: 300px;
+		display:block;
+		overflow: hidden;
+		margin: 0px auto 0px auto;
+	}
+	/*图片轮播*/
+/*	.nivo-slider-wrapper {
+		width: 60%;
+		height: 200px;
+		display: inline-block;
+		overflow: hidden;
+	}*/
+/*	.nivo-slider-wrapper img{
+		width: 60%;
+		height: 200px;
+	}*/
+}
+		
+@media only screen and (max-width: 800px) {
+	.header{
+		width: 100%;
+		height: 97px;
+		background-image:url(../img/top-bg.png);
+		background-repeat: repeat-x;
+	
+	}
+	
+	.header > div{
+		height: 97px;
+		line-height:97px;
+		width: 110px;
+		float: right;
+		color: #FFFFFF;
+		font-size: 24px;
+		font-weight: bold;
+	}
+	.header div >div:active{
+		opacity: 0.5;
+	}
+	
+	.header div > div > img{
+		width: 32px;
+		margin: 13px 5px 17px 0px;
+		vertical-align:middle;
+	}
+	.content{
+		width: 100%;
+	/*	height: -moz-calc(100% - 100px - 100px);
+		height: -webkit-calc(100% - 100px - 100px);*/
+		/*height: calc(100% - 100px - 100px);*/
+		/*height:760px;*/
+	}
+		
+	.menu{
+		width: 100%;
+		height: 77px;
+		background-image: url(../img/bottomBar-bg.png);
+		background-repeat: repeat-x;
+		text-align: center;
+	}
+	.menu > div{
+		padding: 0px 0px 0px 0px;
+		margin: 0px 0px 0px 0px;
+	}
+	.menu > div > div.barBtn{
+		display:inline-block;
+		padding: 0px 0px 0px 0px;
+		margin: 0px 0px 0px 0px;
+		height: 77px;
+		line-height:77px;
+		width: 100px;
+		text-align: center;
+		overflow: hidden;
+	}
+	
+	.menu > div > div.barSplit{
+		display:inline-block;
+		padding: 0px 0px 0px 0px;
+		margin: 0px 0px 0px 0px;
+		height: 77px;
+		line-height:77px;
+		width: 2px;
+		text-align: center;
+		overflow: hidden;
+	}
+	
+	.menu > div > div.barBtn:active{
+		 background-image: url(../img/btn-bg-active.png);  
+	    background-position-y: -80px;
+	    background-size:100px 163px;
+	    box-shadow: 0px 0px 20px #ff59b0;
+	}
+	
+	.menu > div > div.barBtn > span{
+		display: none;
+	}
+	.menu > div > div.barBtn > img{
+		width: 40px;
+		margin: 18px 30px 18px 30px;
+		display: block;
+	}
+	
+	.menu > div > div.li-active{
+	    background-image: url(../img/btn-bg-active.png);  
+	    background-position-y: -80px;
+	    background-size:100px 163px;
+	    box-shadow: 0px 0px 20px #ff59b0;
+	}
+	.swipe-wrap > .wrap > div > div.homePage >div{
+		width: 100%;
+		max-width: 600px;
+		display: block;
+		overflow: hidden;
+		position: relative;
+		text-align:center;
+	}
+	.swipe-wrap > .wrap> div  > div.homePage img{
+		max-width: 580px;
+	}
+	
+/*	.nivo-slider-wrapper {
+		width: 95%;
+		height: 200px;
+		margin: 10px;
+		display: inline-block;
+		overflow: hidden;
+	}
+	.nivo-slider-wrapper img{
+		width: 60%;
+		height: 200px;
+	}*/
+}
+
+
+/*菜单*/
+#slider{ width:100%;height:100%;padding:0px;}
+.swipe {
+  overflow: hidden;
+  visibility: hidden;
+  position: relative;
+}
+.swipe-wrap {
+  overflow: hidden;
+  position: relative;width:100%;height:100%;padding:0px;
+}
+
+.swipe-wrap > .wrap {
+  display: block;
+  float:left;
+  width:100%;
+  position: relative;
+  /*height:100%;*/
+  overflow: auto;
+}
+
+
+
+/*.wrap > div.page{
+	margin: 10px auto auto auto;
+	width: 95%;
+	height: 95%;
+	display: block;
+	background:rgba(255,255,255,0.3);
+	border-radius: 7px 7px 7px 7px;
+	box-shadow: 0px 0px 15px #666;
+	border: solid 2px rgba(255,33,96,0.5);
+	
+}*/
+
+
+
+/*图片轮播*/
+#dev7link {
+	position: absolute;
+	top: 0;
+	left: 50px;
+	background: url(images/dev7logo.png) no-repeat;
+	width: 60px;
+	height: 67px;
+	border: 0;
+	display: block;
+	text-indent: -9999px;
+}
+
+
+/*====================*/
+/*=== Other Styles ===*/
+/*====================*/
+.clear {
+	clear: both;
+}
+/*导航按钮*/
+/*.NavButtonBar {
+	position: absolute;
+	width: 100%;
+	height: 60px;
+	left: 0px;
+	bottom: 20px;
+}
+.NavButtonBar > .pre{
+	width: 80px;
+	height: 80px;
+	border: none;
+	border-radius: 40px;
+	background: url(../img/icon-left.png) no-repeat center,rgba(255,255,255,0.4);
+	float: left;
+}
+.NavButtonBar > .next{
+	width: 80px;
+	height: 80px;
+	border: none;
+	border-radius: 40px;
+	background: url(../img/icon-right.png) no-repeat center,rgba(255,255,255,0.4);
+	float: right;
+}*/

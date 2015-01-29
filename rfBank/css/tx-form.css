@@ -1,0 +1,110 @@
+
+/*表单样式*/
+.tx-form{
+	padding: 5px;
+}
+.tx-form ul{
+	list-style: none;
+	padding: 0px;
+	margin: 0px;
+}
+.tx-form ul > label{
+	display: block;
+	width: 100%;
+	font-size: 24px;
+	color:#a12160;
+	text-shadow: 1px 1px 1px #FFF;
+	font-weight: bold;
+	text-align: center;
+	text-decoration: underline;
+}
+.tx-form li{
+	margin: 5px;
+}
+.tx-form ul > li > label{
+	display: block;
+	width: 100%;
+	font-size: 24px;
+	color:#a12160;
+	text-shadow: 1px 1px 1px #FFF;
+	font-weight: bold;
+}
+.tx-form ul > li > div{
+	display: block;
+	white-space: nowrap;
+	border-radius: 7px;
+	height: 50px;
+	line-height: 50px;
+}
+.tx-form >ul > li >div > button{
+	height: 45px;
+	border: none;
+	border-radius: 10px;
+	font-size: 18px;
+	background:url(../img/button-bg.png);
+	font-weight: bold;
+	color: #FFFFFF;
+	text-shadow: 1px 1px 2px #000;
+	padding-left: 50px;
+	display: inline-block;
+}
+.tx-form >ul > li >div > button:active{
+	opacity: 0.5;
+}
+.tx-form input{
+	width: 65%;
+	border: 0px;
+	height: 38px;
+	font-size: 20px;
+	border-radius: 7px;
+	letter-spacing:8px;
+	text-shadow: 1px 1px 2px #000;
+	padding-left: 15px;
+	display: inline-block;
+	background-color: rgba(255,255,255,0.7);
+	border: solid 2px #FFF;
+}
+.buttonbar {
+	position: absolute;
+	width: 100%;
+	height: 60px;
+	left: 0px;
+	top:80%
+}
+.buttonbar > .pre{
+	width: 80px;
+	height: 80px;
+	border: none;
+	border-radius: 40px;
+	background: url(../img/icon-left.png) no-repeat center,rgba(255,255,255,0.4);
+	float: left;
+}
+.buttonbar > .pre:active{
+	border:solid 2px #A12160;
+}
+.buttonbar > .next{
+	width: 80px;
+	height: 80px;
+	border: none;
+	border-radius: 40px;
+	background: url(../img/icon-right.png) no-repeat center,rgba(255,255,255,0.4);
+	float: right;
+}
+.buttonbar > .next:active{
+	border:solid 2px #A12160;
+}
+.des-content{
+	display: block;
+	margin:0px 20px 15px 20px;
+	padding:5px;
+	background-color: rgba(255,255,255,0.4);
+	border-radius: 7px;
+	border: solid 1px #A12160;
+	font-size: 18px;
+}
+.des-content ul{
+	list-style: none;
+	padding: 0px;
+	margin: 0px;
+	
+}

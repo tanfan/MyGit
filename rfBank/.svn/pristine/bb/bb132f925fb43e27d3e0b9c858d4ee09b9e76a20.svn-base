@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=1280,height=1024, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+		<title>STEP01</title>
+		<link rel="stylesheet" href="../../css/tx-inset.css" />
+		<link rel="stylesheet" href="../../css/dialog.css" />
+		<link rel="stylesheet" href="../../css/tx-form.css" />
+		<script type="text/javascript" src="../../script/jquery-1.8.3.js" ></script>
+		<script type="text/javascript" src="../../script/page.js" ></script>
+		<script type="text/javascript" src="../../script/tx-inset.js" ></script>
+		<script type="text/javascript" src="../../script/echarts/echarts-plain.js" ></script>
+	</head>
+	<body data-NextPage="file:///android_asset/tx/txdemo/step02.html" scroll=no style="overflow:auto" >
+		<div class="header" >
+			<div class="title">
+				<div>
+					<img src="../../img/icon-setting.png" />
+					<span>业务办理 》电子渠道注册</span>
+				</div>
+			</div>
+			<div class="button">
+				<div id="btnExitTx">
+					<span>取消</span>
+					<img src="../../img/icon-right.png" />
+				</div>
+			</div>
+		</div>
+		<div class="buttonbar">
+			<button class="pre"></button>
+			<button class="next"></button>
+		</div>
+		<div class="content">
+			<div class="tx-pages">
+				<!-- pages -->
+				<div class="active" style="height: 200px;border: 1px solid #000000;">
+				<!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+				<div id="main" style="height:100px;width: 50%;border: 1px solid #0000FF;">
+					
+				</div>
+				<script type="text/javascript">
+				function showChar(){
+						$("#main").css("height",$(".content").height());
+						var myChart = echarts.init(document.getElementById('main'));
+						 option = {
+title : {
+        text: '本款产品与其他收益工具近一年收益比较',
+      x:'center',
+    },
+    tooltip : {
+        trigger: 'axis'
+    },
+    legend: {
+        data:['收益体验值'],
+        x: 'right',
+      y:'center',
+
+    },
+  grid:{
+		width:'70%',
+		height:'200px',
+    },
+							 
+   
+    calculable : true,
+    xAxis : [
+        {
+            type : 'category',
+            data : ['本款理财产品','CPI年涨幅','股票型基金','一年期定存','货币性基金']
+        }
+    ],
+    yAxis : [
+        {
+            type : 'value'
+        }
+    ],
+    series : [
+        {
+            
+            type:'bar',
+            data:[12, 8, 23, 4, 2,],
+            
+           
+        },
+       
+    ]
+};
+							// 为echarts对象加载数据
+							myChart.setOption(option);
+							}
+											
+							$(function(){
+								$(window).resize(showChar);
+								showChar();
+								});
+				</script>
+				</div>
+				<div>page2</div>
+				<div>page3</div>
+				<!-- pages end -->
+			</div>
+		</div>
+	</body>
+</html>

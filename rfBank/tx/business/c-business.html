@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=1280,height=1024, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+		<link rel="stylesheet" href="c-business-css.css" />
+			<script type="text/javascript" src="../../script/jquery-1.8.3.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				$(".header > div.button").click(function() {
+					rexseeBrowser.dismiss();
+				});
+			});
+					$(function() {
+				$(".c-business-menu  ul > li").click(function() {
+		if ($(this).attr("data-url") != null) {
+			rexseePopupWindow.show($(this).attr("data-url"), 'browser-progress-dialog:hidden;window-moveable:false;window-cancelable:false;window-modeless:false;window-dim-amount:1;window-style:transparent;window-animation:right;border-width:0px;window-align:center;window-vertical-align:middle;width:fillparent;height:fillparent;');
+		}
+				else {
+			alert("功能开发中");
+			
+		}
+	})
+			});
+		</script>
+		<title></title>
+	</head>
+
+	<body>
+		<div class="header">
+			<div class="title">
+				<div>公司业务</div>
+			</div>
+			<div class="button">
+				<div id="btnExitTx">
+					<span>关闭</span>
+					<img src="../../img/icon-right.png" />
+				</div>
+			</div>
+		</div>
+		<div class="content"  style="overflow: hidden;">
+			<div class="c-business-menu">
+
+				<ul>
+					<li data-url="file:///android_asset/tx/business/c-business-loan.html">
+						<img src="../../img/tx-icon/ebank.png" />贷款业务
+						<li data-url="file:///android_asset/tx/business/c-business-deposit.html">
+							<img src="../../img/tx-icon/regec.png" />存款业务
+							<li data-url="file:///android_asset/tx/business/c-business-paper.html">
+								<img src="../../img/tx-icon/cpay.png" />票据业务
+								<li data-url="file:///android_asset/tx/business/c-business-settlement.html">
+								<img src="../../img/tx-icon/cpay.png" />结算业务
+								<li data-url="file:///android_asset/tx/business/c-business-other.html">
+								<img src="../../img/tx-icon/cpay.png" />其它业务
+				</ul>
+			</div>
+		</div>
+	</body>
+
+</html>

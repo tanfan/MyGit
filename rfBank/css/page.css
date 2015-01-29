@@ -1,0 +1,108 @@
+html{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+body{
+	width: 100%;
+	height: 100%;
+	padding: 0px;
+	margin: 0px;
+	overflow: hidden;
+	background-image: url(../img/back.png);
+	background-size: 960px 600px;
+}
+@media only screen and (max-width: 1280px) {
+		
+	.header{
+		width: 100%;
+		height: 97px;
+		background-image:url(../img/top-bg.png);
+		background-repeat: repeat-x;
+		overflow: hidden;
+	}
+	.header > div.title{
+		height: 97px;
+		line-height:97px;
+		width: 110px;
+		float: left;
+		color: #FFFFFF;
+		font-size: 24px;
+		margin-left: 15px;
+		font-weight: bold;
+	}
+	
+	.header div.title > div > img{
+		width: 32px;
+		margin: 13px 5px 17px 0px;
+		vertical-align:middle;
+	}
+	.header > div.button{
+		height: 97px;
+		line-height:97px;
+		width: 110px;
+		float: right;
+		color: #FFFFFF;
+		font-size: 24px;
+		margin-left: 15px;
+		font-weight: bold;
+	}
+	
+	.header div.button > div > img{
+		width: 32px;
+		margin: 13px 5px 17px 0px;
+		vertical-align:middle;
+	}		
+	.content{
+		width: 100%;
+		
+		overflow: hidden;
+	}
+	
+}
+		
+@media only screen and (max-width: 1024px) {
+	.header{
+		width: 100%;
+		height: 97px;
+		background-image:url(../img/top-bg.png);
+		background-repeat: repeat-x;
+		padding-left: 15px;
+		padding-right: 15px;
+		overflow: hidden;
+	}
+	.header > div.title{
+		height: 97px;
+		line-height:97px;
+		width: 110px;
+		float: left;
+		color: #FFFFFF;
+		font-size: 24px;
+	}
+	
+	.header div.title > div > img{
+		width: 32px;
+		margin: 13px 5px 17px 0px;
+		vertical-align:middle;
+	}
+	
+	.header > div.button{
+		height: 97px;
+		line-height:97px;
+		width: 110px;
+		float: right;
+		color: #FFFFFF;
+		font-size: 24px;
+	}
+	
+	.header div.button > div > img{
+		width: 32px;
+		margin: 13px 5px 17px 0px;
+		vertical-align:middle;
+	}
+	.content{
+		width: 100%;
+		overflow: hidden;
+	}
+		
+}

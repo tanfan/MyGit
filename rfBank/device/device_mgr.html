@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=1280,height=1024, initial-scale=1.0, user-scalable=no" />
+		<title>设备测试页面</title>
+		<link rel="stylesheet" href="../css/page.css" />
+		<link rel="stylesheet" href="device_mgr.css" />
+		<script type="text/javascript" src="../script/jquery-1.8.3.min.js" ></script>
+		<script type="text/javascript" src="../script/asyncall.min.js" ></script>
+		<script type="text/javascript" src="../script/GgDevice.min.js" ></script>
+		<script type="text/javascript" src="device_mgr.js" ></script>
+	</head>
+	<body  scroll=no style="overflow:hidden" >
+		<div class="header" >
+			<div class="title">
+				<div>
+					<img src="../img/icon-setting.png" />
+					设置
+				</div>
+				
+			</div>
+			<div class="button">
+				<div><span>完成</span><img src="../img/icon-right.png" /></div>
+			</div>
+		</div>
+		<div class="content">
+			<div class="blueteethState">
+				<span class="title">
+					蓝牙状态
+				</span>
+			</div>
+			<div class="bondDevInfo">
+				<div class="title">
+					已绑定的设备信息：
+				</div>
+				<ul>
+					<li>
+						名称：<span id="lb_devName">--</span>
+					<li>
+						设备地址：<span id="lb_devAddress">--</span>
+					<li>
+						当前连接状态：<span id="lb_linkState">--</span>
+				</ul>
+				
+			</div>
+			<hr />
+			<div class="buttonbar">
+				<button onclick="openBlueTeeth();">
+					打开蓝牙
+				</button>
+				
+				<button onclick="closeBlueTeeth();">
+					关闭蓝牙
+				</button>
+				
+				<button id="serchDev" onclick="findDev()" >
+					搜索设备
+				</button>
+
+				<button id="btnBund" onclick="bundDev()" disabled="disabled">
+					绑定设备
+				</button>
+				<button id="delBund" onclick="delBund()" disabled="disabled">
+					取消绑定
+				</button>
+			</div>
+			<div class="devlist">
+				<ul>
+					请搜索设备。
+				</ul>
+			</div>
+		</div>
+
+	</body>
+</html>

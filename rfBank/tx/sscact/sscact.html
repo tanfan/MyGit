@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=1280,height=1024, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+		<title>STEP01</title>
+		<link rel="stylesheet" href="../../css/tx-inset.css" />
+		<link rel="stylesheet" href="../../css/dialog.css" />
+		<link rel="stylesheet" href="../../css/tx-form.css" />
+		<style>
+			.tx-form .result span {
+				font-size: xx-large;
+				color: green;
+			}
+
+			.span-form-font {
+				font-size: 24px;
+				font-weight: bold;
+				color: #A12160;
+			}
+
+			.result {
+				height: 100%;
+			}
+			
+		</style>
+		<script type="text/javascript" src="../../script/jquery-1.8.3.js"></script>
+		<script type="text/javascript" src="../../script/page.js"></script>
+		<script type="text/javascript" src="../../script/tx-inset.min.js"></script>
+		<script type="text/javascript" src="../../script/asyncall.min.js"></script>
+		<script type="text/javascript" src="../../script/GgDevice.min.js"></script>
+		<script type="text/javascript" src="../../script/DevRead.js"></script>
+		<script>
+			$(function() {
+
+				//统一dialog高度
+				function reLayoutDialog() {
+					$(".dialog > .dlg-content").css("height", $(".content").height() - 100);
+				};
+				$(window).resize(reLayoutDialog);
+				reLayoutDialog();
+
+				//页面跳转前执行方法 0为第一页 next to是第一个参数+1
+				txPage.next(0, function(to) {
+					//alert("first"+to);
+					//return false;
+					return turnCheck(to-1);
+				});
+
+				txPage.next(1, function(to) {
+					//alert("two:"+to);
+					return true;
+				})
+
+				//页面跳转前执行方法 0为第一页 pre to是第一个参数-1
+				txPage.pre(1, function(to) {
+					//alert("two:"+to);
+					alert(to);
+					return true;
+				});
+
+				txPage.active(1, function() {
+					//alert("active"+1);
+					//alert($(".tx-pages >div.active").index());
+				});
+				txPage.active(2, function() {
+					//alert("active"+2);
+				});
+				txPage.active(3, function() {
+					//alert("active"+3);
+				});
+
+				//result页面li平均间隔
+				//在rexsee浏览器下 如果未设置li height height()取得的值会变动 最后页面显示会有问题 未设置在火狐下正常显示
+				function reLayoutResultDiv() {
+					liNum = $(".result >li").length;
+					//alert(liNum)
+					liHeight = $(".result >li").height();
+					//alert($(".result >li").height())
+					$(".result >li").css("margin-top", ($(".dialog > .dlg-content").height() - liHeight * liNum) / (liNum + 1));
+				}
+
+
+				$(window).resize(reLayoutResultDiv);
+				reLayoutResultDiv();
+
+			});
+		</script>
+	</head>
+
+	<body data-NextPage="file:///android_asset/tx/txdemo/step02.html" scroll="no" style="overflow:hidden">
+		<div class="header">
+			<div class="title">
+				<div>
+					<img src="../../img/icon-setting.png" />
+					<span>业务办理 》电子渠道注册</span>
+				</div>
+			</div>
+			<div class="button">
+				<div id="btnExitTx">
+					<span>取消</span>
+					<img src="../../img/icon-right.png" />
+				</div>
+			</div>
+		</div>
+		<div class="buttonbar">
+			<button class="pre"></button>
+			<button class="next"></button>
+		</div>
+		<div class="content">
+			<div class="tx-pages">
+				<!--
+				交易页面开始
+				-->
+				<!-- 第一个页面-->
+				<div class="active">
+					<div class="dialog" style="margin: 0 auto 0 auto;width:96%;overflow: hidden;">
+						<div class="dlg-header">
+							<span class="dlg-title"> 金融社保卡激活 - 信息输入 (1/3)</span><span class="dlg-title-right">&nbsp;</span>
+						</div>
+						<div class="dlg-content">
+							<div class="tx-form">
+								<ul>
+									<li>
+										<label>身份证号码：</label>
+										<div>
+											<input id="idCardNo" type="text" name="idCardNo" readonly="readonly" emptyCheck="身份证未刷卡！" />
+											<button id="readIdCard" targetId="idCardNo" style="background: url(../../img/icon-login.png) no-repeat 7px 3px,url(../../img/button-bg.png);" onclick="readIdCard(this);">
+												刷二代身份证
+											</button>
+										</div>
+									</li>
+									<li>
+										<label>金融卡卡号:</label>
+										<div>
+											<input id="jrCardNo" type="text" name="cardNo" readonly="readonly" emptyCheck="金融卡未刷卡！" />
+											<button id="readJrCard" targetId="jrCardNo" style="background: url(../../img/icon-ywbl.png) no-repeat 7px 3px,url(../../img/button-bg.png);" onclick="readCard(this);">
+												刷金融卡
+											</button>
+										</div>
+									</li>
+									<li>
+										<label>社保卡卡号:</label>
+										<div>
+											<input id="sbCardNo" type="text" name="cardNo" readonly="readonly" emptyCheck="社保卡未刷卡！" />
+											<button id="readSbCard" targetId="sbCardNo" style="background: url(../../img/icon-ywbl.png) no-repeat 7px 3px,url(../../img/button-bg.png);" onclick="readCard(this);">
+												刷社保卡
+											</button>
+										</div>
+									</li>
+									<li>
+										<label>密码：</label>
+										<div>
+											<input id="ssPwd" targetId="ssPwd" type="password" name="ssPwd" onclick="readPin(this)" readonly="readonly" emptyCheck="密码键盘未读取！" />
+										</div>
+									</li>
+									<li>
+										<label>选择刷卡类型:</label>
+										<input type="radio" value="0" name="readCardType" checked="checked" style="zoom: 200%;" />
+										<span class="span-form-font">磁条卡</span>
+										<input type="radio" value="1" name="readCardType" style="zoom: 200%;" />
+										<span class="span-form-font">接触IC卡</span>
+										<input type="radio" value="2" name="readCardType" style="zoom: 200%;" />
+										<span class="span-form-font">非接IC卡</span>
+									</li>
+								</ul>
+							</div>
+
+							<div class="des-content">
+								<ul>
+									操作说明:
+									<li>
+										1、将客户的二代证放在设备刷二代证处，点周刷二代证按钮。（二代证重新刷须取下重新放置）
+									</li>
+									<li>
+										2、点击刷卡按钮，然后在设备刷卡处刷卡。
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 第二个页面-->
+				<div>
+					<div class="dialog" style="margin: 0 auto 0 auto;width:96%;overflow: hidden;">
+						<div class="dlg-header">
+							<span class="dlg-title"> 社保卡激- 业务选项 (2/3)</span><span class="dlg-title-right">&nbsp;</span>
+						</div>
+						<div class="dlg-content">
+							<div class="tx-form">
+								<ul>
+									<li>
+										<label>开通自助转账:</label>
+										<input type="radio" name="openSelfHelpTransfer" style="zoom: 200%;" checked="checked" />
+										<span class="span-form-font">是</span>
+										<input type="radio" name="openSelfHelpTransfer" style="zoom: 200%;" />
+										<span class="span-form-font">否</span>
+										<label>每日转账限额(单位：元):</label>
+										<input type="number" value="5000" />
+									</li>
+									<li>
+										<label>激活類型：</label>
+										<input type="checkbox" name="actType" style="zoom: 200%;" checked="checked" />
+										<span class="span-form-font">金融卡</span>
+										<input type="checkbox" name="actType" style="zoom: 200%;" checked="checked" />
+										<span class="span-form-font">社保卡</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 第三个页面-->
+				<div>
+					<div class="dialog" style="margin: 0 auto 0 auto;width:96%;overflow: hidden;">
+						<div class="dlg-header">
+							<span class="dlg-title"> 社保卡激- 业务办理结果 (3/3)</span><span class="dlg-title-right">&nbsp;</span>
+						</div>
+						<div class="dlg-content">
+							<div class="tx-form" style="height: 100%;">
+								<ul class="result" style="height: 100%;padding: 1px;">
+									<li style="height: 30px;">
+										<span>金融卡激活结果：</span><span>成功</span>
+									</li>
+									<li style="height: 30px;">
+										<span>社保卡激活结果：</span><span>成功</span>
+									</li>
+									<li style="height: 30px;">
+										<span>社保卡改密结果：</span><span>成功</span>
+									</li>
+									<li style="height: 30px;">
+										<span>ATM自助转账签约结果：</span><span>成功</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--
+				作者：
+				时间：2014-08-18
+				描述：交易页面结束
+				-->
+			</div>
+		</div>
+	</body>
+
+</html>

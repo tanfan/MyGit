@@ -1,0 +1,79 @@
+@media only screen and (max-width: 1280px) {
+	.index-page2 {
+		position: absolute;
+		display: block;
+		width: 100%;
+		top: 25%;
+		text-align: center;
+	}
+	.xqfx {
+		display: inline-block;
+		margin-left: auto;
+		margin-right: auto;
+		white-space: nowrap;
+	}
+	.xqfx > div {
+		display: inline-block;
+		float: left;
+		white-space: pre-wrap;
+	}
+	.xqfx > div.item {
+		height: 250px;
+		width: 200px;
+		font-size: 32px;
+		text-shadow: 0px 0px 3px #FFFFFF;
+	}
+	.xqfx > div.split {
+		height: 250px;
+		width: 80px;
+		margin: 0px 10px 0px 20px;
+	}
+	.xqfx > div.item > img {
+		height: 200px;
+		width: 200px;
+		box-shadow: 0px 0px 10px #000000;
+	}
+	.xqfx > div.split > img {
+		padding-top: 20px;
+	}
+}
+@media only screen and (max-width: 768px) {
+	
+	.index-page2 {
+		position: absolute;
+		display: block;
+		width: 100%;
+		top: 25%;
+		text-align: center;
+	}
+	.xqfx {
+		display: inline-block;
+		margin-left: auto;
+		margin-right: auto;
+		white-space: nowrap;
+	}
+	.xqfx > div {
+		display: inline-block;
+		float: left;
+		white-space: pre-wrap;
+	}
+	.xqfx > div.item {
+		height: 250px;
+		width: 200px;
+		font-size: 32px;
+		text-shadow: 0px 0px 3px #FFFFFF;
+	}
+	.xqfx > div.split {
+		height: 250px;
+		width: 80px;
+		margin: 0px 0px 0px 0px;
+	}
+	.xqfx > div.item > img {
+		height: 200px;
+		width: 200px;
+		box-shadow: 0px 0px 10px #000000;
+	}
+	.xqfx > div.split > img {
+		padding-top: 20px;
+	}
+}

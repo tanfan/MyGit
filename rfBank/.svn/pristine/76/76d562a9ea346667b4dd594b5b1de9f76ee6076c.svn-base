@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=1280,height=1024, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+		<link rel="stylesheet" href="../../css/tx.css"/>
+		
+		<script type="text/javascript" src="../../script/jquery-1.8.3.min.js"></script>	
+		<script type="text/javascript" src="../../script/page.js"></script>
+		<script type="text/javascript" src="../../script/tx.min.js"></script>
+		<script type="text/javascript" src="../../script/iscroll/iscroll.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				//统一dialog高度
+				var myscroll = new IScroll("#parent",{hScroll:false,vScroll:true,hScrollbar:false, vScrollbar:false});
+				function reLayoutDialog() {
+					var h = $(".content").height() - 80;
+					$(".dialog > .dlg-content").css("height", h<400?400:h);
+					//myscroll.destroy();
+					//myscroll =  new IScroll("#parent",{hScroll:false,vScroll:true,hScrollbar:false, vScrollbar:false});
+					myscroll.refresh();
+				};
+				$(window).resize(reLayoutDialog);
+				reLayoutDialog();
+			});
+		</script>
+		<title>理财产品</title>
+
+	</head>
+		<body scroll=no style="overflow:hidden">
+		<div class="header">
+			<div class="title">
+				<div>中银债富</div>
+			</div>
+			<div class="button">
+				<div id="btnExitTx">
+					<span>关闭</span>
+					<img src="../../img/icon-right.png" />
+				</div>
+			</div>
+		</div>
+		<div id="parent" class="content" style="overflow: auto;">
+			<div>
+				<div class="head" style="height:150px;margin:30px">
+			<div class="head_left" style="width:20%;height:150px;float:left;">
+				<img src="../../img/lc-img/bg_0101_item1.png"  style="height:150px;"/>
+			</div>
+			<div class="head_middle" style="width:58%;height:150px;float:left;;">
+				<h1 style="font-size:20px">中银债富2014021期人民币理财计划</h1>
+				<p style="font-size:15px">
+				<table>
+				<tr>
+				<td>收益特点：非保本浮动收益型</td>
+				<td>是否保本：不保本</td>
+				</tr>
+				<tr>
+				<td>发行日期：2014-01-14~2014-02-07&nbsp;&nbsp;&nbsp;&nbsp;</td>
+				<td>起购金额：10万</td>
+				</tr>
+				<tr>
+				<td>募集区域：全行</td>
+				<td>产品期限：6.1个月</td>
+				</tr>
+				</table></p>
+			</div>
+			<div class="head_right" style="width:20%;height:150px;float:left;">
+				<br />
+				<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;<img src="btn_ManageM_buy.png" style="align: center";>
+			</div>
+			</div>
+			<hr  style="margin:30px"/>
+			<div class="product" style="height:120px;margin:30px;">
+				<h1 style="font-size: 20px;">产品亮点</h1>
+				<table style="width:80%;margin:30px;">
+					<tr>
+						<td><img src="product01.jpg"/></td>
+						<td><img src="product02.jpg"/></td>
+						<td><img src="product03.jpg"/></td>
+						<td><img src="product04.jpg"/></td>
+						<td><img src="product05.jpg"/></td>
+					</tr>
+				</table>
+			</div>
+			<hr style="margin:30px"/>
+			<div class="goal" style="height:250px;margin:30px;">
+				<h1 style="font-size: 20px;">理财目标</h1>
+				<table style="width:80%;margin:30px;">
+					<tr style="text-align:center">
+						<td><p style="color:green;line-height:1px">适合的</p><p style="line-height:1px">理财目标</p></td>
+						<td><p style="line-height:1px;"><img src="goal01.jpg"/></p><p style="line-height:1px">适合结婚</p></td>
+						<td><p style="line-height:1px"><img src="goal01.jpg"/></p><p style="line-height:1px">适合投资</p></td>
+						<td><p style="line-height:1px"><img src="goal01.jpg"/></p><p style="line-height:1px">适合买房</p></td>
+						<td><p style="line-height:1px"><img src="goal01.jpg"/></p><p style="line-height:1px">适合养老</p></td>
+					    <td><p style="line-height:1px"><img src="goal01.jpg"/></p><p style="line-height:1px">适合闲钱增值</p></td>
+					</tr>
+					<tr style="text-align:center">
+						<td><p style="color:red;line-height:1px">适合的</p><p style="line-height:1px">理财目标</p></td>
+						<td><p style="line-height:1px;"><img src="goal06.jpg"/></p><p style="line-height:1px">不适合生育</p></td>
+						<td><p style="line-height:1px"><img src="goal07.jpg"/></p><p style="line-height:1px">不适合购买股票</p></td>
+						<td><p style="line-height:1px"><img src="goal08.jpg"/></p><p style="line-height:1px">不适合增值</p></td>
+					</tr>
+				</table>
+			</div>
+			<hr style="margin:30px"/>
+			<div class="buy_know" style="height:450px;margin:30px;">
+				<div>
+				<h1 style="font-size: 20px;">购买理财须知</h1>
+				<div align="center" >
+				<table style="width:500px;text-align:center;border:1px solid #DCDCDC" cellspacing="0">
+					<tr >
+						<td style="background-color: #FFFFFF;height:40px;;">收益体验</td>
+						<td style="background-color: #E6E6FA;">收益计算器</td>
+						<td style="background-color: #E6E6FA;">同类产品</td>
+						<td style="background-color: #E6E6FA;">客户评价</td>
+						<td style="background-color: #E6E6FA;">详细信息</td>
+					</tr>
+				</table>
+				</div>
+				</div>
+				<br />
+				<div class="pic" align="center">
+				<img src="picture.jpg" align="center"/>
+				</div>
+			</div>			
+			</div>	
+		</div>
+</body>
+		
+</html>

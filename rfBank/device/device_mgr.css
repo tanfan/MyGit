@@ -1,0 +1,78 @@
+.blueteethState .title{
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.bondDevInfo{
+	
+}
+.bondDevInfo div.title{
+	font-size: 16px;
+	font-weight: bold;
+}
+.bondDevInfo ul{
+	list-style: none;
+	padding-left: 10px;
+	margin: 0px;
+}
+.bondDevInfo ul > li{
+	list-style: none;
+	padding: 0px;
+	margin: 0px;
+	height: 30px;
+	line-height: 30px;
+}
+
+
+
+.buttonbar{
+padding:0px 10px 0px 10px;
+}
+
+.buttonbar > button {
+	display: inline-block;
+	margin: 0px;
+	width: 120px;
+	height: 50px;
+	border: none;
+	background-image: url(button-bg.png);
+	border-radius: 7px;
+	box-shadow: 2px 2px 2px #000000;
+	font-size: 20px;
+	font-weight: bold;
+	color: #FFFFFF;
+	text-shadow: 2px 2px 3px #333333;
+	
+}
+.buttonbar > button:disabled{
+	color: #999;
+	text-shadow: 1px 1px 1px #FFFFFF;
+}
+
+.devlist ul {
+	list-style: none;
+	margin: 0px;
+	padding: 10px;
+}
+.devlist li {
+	list-style: none;
+	margin: 5px;
+	padding: 0px;
+	display: inline-block;
+	height: 80px;
+	line-height: 80px;
+	width: 260px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	text-align: center;
+	/*background-image: -webkit-gradient(linear, center top, center bottom, from(deepskyblue), to(lightgreen));*/
+	background-image: url(../img/top-bg.png);
+	border-radius: 15px;
+	font-size: 18px;
+	box-shadow: 2px 2px 3px #333;
+	border: solid 2px #FFFFFF;
+}
+.devlist li.dev-selected {
+	 border: solid 2px #892432;
+}
