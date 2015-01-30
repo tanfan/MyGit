@@ -1,9 +1,14 @@
 @media only screen and (max-width: 1280px) {
+.h-tx-menu{
+		width: 100%;
+		height: 100%;
+	}
 .h-tx-menu> ul{
 		list-style: none;
 		padding: 0px;
 		margin: 0px auto 0px auto;	
-		width: 840px;
+		width: 100%;
+		height: 100%;
 	}
 	
 .h-tx-menu>ul > li{
