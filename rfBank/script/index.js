@@ -53,15 +53,15 @@ $(function() {
 	setLayout();
 
 	//面面滑动初始化
-	slider = Swipe(document.getElementById('slider'), {
-		auto : 0,
-		continuous : true,
-		callback : function(pos) {
-
-			$(".li-active").removeClass("li-active");
-			$(".menu > div > div[index=" + pos + "]").addClass("li-active");
-		}
-	});
+//	slider = Swipe(document.getElementById('slider'), {
+//		auto : 0,
+//		continuous : true,
+//		callback : function(pos) {
+//
+//			$(".li-active").removeClass("li-active");
+//			$(".menu > div > div[index=" + pos + "]").addClass("li-active");
+//		}
+//	});
 
 	//注册菜单按钮事件
 	$(".menu > div > div").click(function() {

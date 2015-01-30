@@ -4,6 +4,8 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=1280,height=1024, initial-scale=1.0, user-scalable=no" />
+				<meta name="keywords" content="nivoslider,图片切换,jquery" />
+		<meta name="description" content="Helloweba演示平台，演示XHTML、CSS、jquery、PHP案例和示例" />
 		<title>应用程序主页面</title>
 		<link rel="stylesheet" href="css/index.css" />
 		<link rel="stylesheet" href="css/index-tx-menu.css" />
@@ -11,10 +13,10 @@
 		<link rel="stylesheet" href="css/index-h-tx-menu.css" />
 		<link rel="stylesheet" href="css/index-xqfx.css" />
 
-		<link rel="stylesheet" href="nivo-slider/themes/default/default.css" type="text/css" media="screen" />
-		<link rel="stylesheet" href="nivo-slider/themes/light/light.css" type="text/css" media="screen" />
-		<link rel="stylesheet" href="nivo-slider/themes/dark/dark.css" type="text/css" media="screen" />
-		<link rel="stylesheet" href="nivo-slider/themes/bar/bar.css" type="text/css" media="screen" />
+		<!--<link rel="stylesheet" href="nivo-slider/themes/default/default.css" type="text/css" media="screen" />-->
+		<!--<link rel="stylesheet" href="nivo-slider/themes/light/light.css" type="text/css" media="screen" />-->
+		<!--<link rel="stylesheet" href="nivo-slider/themes/dark/dark.css" type="text/css" media="screen" />-->
+		<!--<link rel="stylesheet" href="nivo-slider/themes/bar/bar.css" type="text/css" media="screen" />-->
 		<link rel="stylesheet" href="nivo-slider/nivo-slider.css" type="text/css" media="screen" />
 
 		<script type="text/javascript" src="script/jquery-1.8.3.js"></script>
@@ -30,15 +32,10 @@
 		
 		//
 		<script type="text/javascript" src="script/jquery.nivo.slider.pack.js"></script>
-<!--<script type="text/javascript">
-$(function() {
-	 $('#nivoSlider').nivoSlider();
-});
-</script>-->
-		<!--<style type="text/css">
-#nivoSlider{width:960px; height:250px;background:url(img/ad/images/loading.gif) no-repeat 50% 50%;}
+		<style type="text/css">
+/*#nivoSlider{width:960px; height:250px;background:url(img/ad/images/loading.gif) no-repeat 50% 50%;}*/
 #nivoSlider img {position:absolute;top:0px;left:0px;display:none;}
-.nivo-controlNav{position:absolute;;left:580px;margin-top: -20px}
+.nivo-controlNav{position:absolute;;left:900px;margin-top: -50px}
 .nivo-controlNav a {display:block;width:22px;height:22px;background:url(img/ad/images/bullets.png) no-repeat;text-indent:-9999px;border:0;;float:left;}
 .nivo-controlNav a.active {background-position:0 -22px;}
 .nivo-directionNav a {display:block;width:30px;height:30px;background:url(img/ad/images/arrows.png) no-repeat;text-indent:-9999px;border:0;}
@@ -46,7 +43,7 @@ a.nivo-nextNav {background-position:-30px 0;right:15px;}
 a.nivo-prevNav {left:15px;}
 .nivo-caption {text-shadow:none; font-family: Helvetica, Arial, sans-serif;}
 .nivo-caption a {color:#efe9d1;text-decoration:underline;}
-</style>-->
+</style>
 		//
 		<script type="text/javascript">
 			$(function() {
@@ -271,11 +268,13 @@ a.nivo-prevNav {left:15px;}
 												<li data-url="file:///android_asset/tx/business/agriculture-business.html">
 										<img src="img/tx-icon/chgpwd.png" />三农贷款
 												<li data-url="file:///android_asset/tx/business/smal-business-loan.html">
-										<img src="img/tx-icon/sbactive.png" />小微企业贷款
+										<img src="img/tx-icon/smallCompany.jpg" />小微企业贷款
 												<li data-url="file:///android_asset/tx/business/abroad-business.html">
 										<img src="img/tx-icon/manager.png" />出国金融业务
 										<li data-url="file:///android_asset/tx/business/ebank-business.html">
-										<img src="img/tx-icon/yhkyw.png" />电子银行
+										<img src="img/tx-icon/sbactive.png" />电子银行
+													<li data-url="file:///android_asset/tx/business/card-business.html">
+										<img src="img/tx-icon/yhkyw.png" />银行卡
 										<!--<li data-url="file:///android_asset/tx/sscact/sscact.html"><img src="img/tx-icon/sbactive.png"  />金融社保卡激活
 							<li data-url="file:///android_asset/tx/debitopen/debitOpen.html"><img src="img/tx-icon/newcard.png"  />借记卡开卡
 							<li data-url="file:///android_asset/tx/channelreg/channelreg.html"><img src="img/tx-icon/regec.png"  />注册电子渠道
@@ -295,8 +294,8 @@ a.nivo-prevNav {left:15px;}
 							<div class="wrap tx-menu" style="text-align: center;">
 
 						<ul>
-							<li data-url="file:///android_asset/tx/business/c-business.html">
-								开发中
+							<li >
+								<img src="img/tx-icon/yhkyw.png" />银行卡
 						</ul>
 					</div>
 				</div>
@@ -325,8 +324,8 @@ a.nivo-prevNav {left:15px;}
 				<div index="2" class="barBtn">
 					<img src="img/icon-ywbl.png" /><span>业务介绍</span>
 				</div>
-				<!--<div index="3" class="barBtn"><img src="img/icon-xqfx.png" /><span>系统设置</span></div>
-			</div>-->
+				<div index="3" class="barBtn"><img src="img/icon-xqfx.png" /><span>系统设置</span></div>
+			</div>
 		</div>
 		<!--<div class="NavButtonBar">
 			<button class="pre"></button>
