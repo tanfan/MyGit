@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=1280,height=1024, initial-scale=1.0, user-scalable=no" />
-				<meta name="keywords" content="nivoslider,图片切换,jquery" />
+		<meta name="keywords" content="nivoslider,图片切换,jquery" />
 		<meta name="description" content="Helloweba演示平台，演示XHTML、CSS、jquery、PHP案例和示例" />
 		<title>应用程序主页面</title>
 		<link rel="stylesheet" href="css/index.css" />
@@ -29,34 +29,37 @@
 
 		<script type="text/javascript" src="script/hammer.min.js"></script>
 		<script type="text/javascript" src="script/iscroll/iscroll.js"></script>
-		
-		//
 		<script type="text/javascript" src="script/jquery.nivo.slider.pack.js"></script>
 		<style type="text/css">
-/*#nivoSlider{width:960px; height:250px;background:url(img/ad/images/loading.gif) no-repeat 50% 50%;}*/
-#nivoSlider img {position:absolute;top:0px;left:0px;display:none;}
-.nivo-controlNav{position:absolute;;left:900px;margin-top: -50px}
-.nivo-controlNav a {display:block;width:22px;height:22px;background:url(img/ad/images/bullets.png) no-repeat;text-indent:-9999px;border:0;;float:left;}
-.nivo-controlNav a.active {background-position:0 -22px;}
-.nivo-directionNav a {display:block;width:30px;height:30px;background:url(img/ad/images/arrows.png) no-repeat;text-indent:-9999px;border:0;}
-a.nivo-nextNav {background-position:-30px 0;right:15px;}
-a.nivo-prevNav {left:15px;}
-.nivo-caption {text-shadow:none; font-family: Helvetica, Arial, sans-serif;}
-.nivo-caption a {color:#efe9d1;text-decoration:underline;}
-</style>
-		//
+			/*#nivoSlider{width:960px; height:250px;background:url(img/ad/images/loading.gif) no-repeat 50% 50%;}*/
+			#nivoSlider img {position:absolute;top:0px;left:0px;display:none;}
+			.nivo-controlNav{position:absolute;;left:900px;margin-top: -50px}
+			.nivo-controlNav a {display:block;width:22px;height:22px;background:url(img/ad/images/bullets.png) no-repeat;text-indent:-9999px;border:0;;float:left;}
+			.nivo-controlNav a.active {background-position:0 -22px;}
+			.nivo-directionNav a {display:block;width:30px;height:30px;background:url(img/ad/images/arrows.png) no-repeat;text-indent:-9999px;border:0;}
+			a.nivo-nextNav {background-position:-30px 0;right:15px;}
+			a.nivo-prevNav {left:15px;}
+			.nivo-caption {text-shadow:none; font-family: Helvetica, Arial, sans-serif;}
+			.nivo-caption a {color:#efe9d1;text-decoration:underline;}
+		</style>
+		<script type="text/javascript">
+$(function() {
+    $('#nivoSlider').nivoSlider({
+        effect:'slideInLeft' ,// Specify sets like: 'fold,fade,sliceDown'
+        manualAdvance:false,
+        pauseOnHover:true
+    });
+});
+</script>
 		<script type="text/javascript">
 			$(function() {
 				var hammer = new Hammer(document.body, {
 					prevent_default: true
 				});
-				$(".nivoSlider>img").click(function() {
-					alert("aa");
-				});
-					$(".imggg").click(function() {
-					alert("aa");
-				});
-//				$(".tx-menu>ul>li").click(function() {
+//				$(".nivoSlider>img").click(function() {
+//					alert("aa");
+//				});
+//					$(".imggg").click(function() {
 //					alert("aa");
 //				});
 			});
@@ -64,9 +67,10 @@ a.nivo-prevNav {left:15px;}
 
 		<script type="text/javascript" src="nivo-slider/jquery.nivo.slider.js"></script>
 		<script type="text/javascript">
-			$(function() {
-							$('#nivoSlider').nivoSlider();
-						});
+//			$(function() {
+////							$('#nivoSlider').nivoSlider();
+//								$('#nivoSlider').next();
+//						});
 
 			$(function() {
 
@@ -122,37 +126,37 @@ a.nivo-prevNav {left:15px;}
 		<div class="content">
 			<div id="slider" class="swipe">
 				<div class="swipe-wrap">
-					<div id="firstWrap" class="wrap" >
+					<div id="firstWrap" class="wrap">
 						<div id="content">
 							<div class="homePage">
 								<div class="nivo-slider-wrapper  theme-light" style="padding:10px;">
-								<div id="nivoSlider" class="nivoSlider">
-								<img class="imggg" src="img/ad/images/1382100294249300335532.jpg"/>	
-				<img src="img/ad/images/13820934019981841720519.jpg"  />
-				<img src="img/ad/images/13820933451601940983121.jpg" />
-				<img src="img/ad/images/13820935369811607063401.jpg" />
+									<div id="nivoSlider" class="nivoSlider">
+										<img class="imggg" src="img/ad/images/1382100294249300335532.jpg" />
+										<img src="img/ad/images/13820934019981841720519.jpg" />
+										<img src="img/ad/images/13820933451601940983121.jpg" />
+										<img src="img/ad/images/13820935369811607063401.jpg" />
+									</div>
 								</div>
 							</div>
-							</div>
-							<div class="h-tx-menu" >
+							<div class="h-tx-menu">
 								<ul style="text-align: center;vertical-align:middle;height:100%;">
-											<li data-url="file:///android_asset/tx/ManageM/ManageM01.html">
+									<li data-url="file:///android_asset/tx/ManageM/Manage.html" index="1">
 										<img src="img/lc-img/bg_0101_item1.png" />致富理财
-												<li data-url="file:///android_asset/tx/ManageM/ManageM02.html">
-										<img src="img/lc-img/bg_0101_item3.png" />安想理财
-												<li data-url="file:///android_asset/tx/ManageM/ManageM03.html">
-										<img src="img/lc-img/bg_0101_item2.png" />贵金属一号
-									<li data-url="file:///android_asset/tx/business/c-business.html">
-										<img src="img/tx-icon/cpay.png" />公司业务
-										<li data-url="file:///android_asset/tx/business/card-business.html">
-											<img src="img/tx-icon/regec.png" />银行卡
-													<li data-url="file:///android_asset/tx/business/persion-business-loan.html">
-										<img src="img/tx-icon/cpay.png" />个人贷款
-												<li data-url="file:///android_asset/tx/business/agriculture-business.html">
-										<img src="img/tx-icon/ebank.png" />三农贷款
-												<li data-url="file:///android_asset/tx/business/ebank-business.html">
-										<img src="img/tx-icon/yhkyw.png" />电子银行
-											<!--<li data-url="file:///android_asset/form-test.html"><img src="img/tx-icon/yhkyw.png"  />理财产品购买
+										<li data-url="file:///android_asset/tx/ManageM/ManageM02.html">
+											<img src="img/lc-img/bg_0101_item3.png" />安想理财
+											<li data-url="file:///android_asset/tx/ManageM/ManageM03.html">
+												<img src="img/lc-img/bg_0101_item2.png" />贵金属一号
+												<li data-url="file:///android_asset/tx/business/c-business.html">
+													<img src="img/tx-icon/cpay.png" />公司业务
+													<li data-url="file:///android_asset/tx/business/card-business.html">
+														<img src="img/tx-icon/regec.png" />银行卡
+														<li data-url="file:///android_asset/tx/business/persion-business-loan.html">
+															<img src="img/tx-icon/cpay.png" />个人贷款
+															<li data-url="file:///android_asset/tx/business/agriculture-business.html">
+																<img src="img/tx-icon/ebank.png" />三农贷款
+																<li data-url="file:///android_asset/tx/business/ebank-business.html">
+																	<img src="img/tx-icon/yhkyw.png" />电子银行
+																	<!--<li data-url="file:///android_asset/form-test.html"><img src="img/tx-icon/yhkyw.png"  />理财产品购买
 								<li data-url="file:///android_asset/form-test.html"><img src="img/tx-icon/manager.png"  />客户
 								<li data-type="DIR" data-url="file:///android_asset/query.html"><img src="img/tx-icon/regec.png"  />我的任务
 								<li data-type="DIR" data-url="file:///android_asset/bankcard.html"><img src="img/HBuilder.png"  />消息中心
@@ -189,7 +193,7 @@ a.nivo-prevNav {left:15px;}
 						<div class="lc-menu">
 							<div class="manage">理财产品
 								<ul>
-									<li data-url="file:///android_asset/tx/ManageM/ManageM01.html">
+									<li data-url="file:///android_asset/tx/ManageM/Manage.html" index="1">
 										<div>
 											<img src="img/lc-img/bg_0101_item1.png" />
 											<div><span class="l1">推荐指数：★★★★★</span><span class="l2">保本:是</span><span class="l3">委托：12个月</span> </div>
@@ -252,62 +256,63 @@ a.nivo-prevNav {left:15px;}
 											<img src="img/lc-img/bg_0101_item8.png" />
 											<div><span class="l1">推荐指数：★★★★★</span><span class="l2">保本:是</span><span class="l3">委托：12个月</span> </div>
 										</div>贵金属理财二号</li>
-										<li>
-											<div>
-												<img src="img/lc-img/bg_0101_item12.png" />
-												<div><span class="l1">推荐指数：★★★★★</span><span class="l2">保本:是</span><span class="l3">委托：12个月</span> </div>
-											</div>贵金属理财三号</li>
-										<li>
-											<div>
-												<img src="img/lc-img/bg_0101_item13.png" />
-												<div><span class="l1">推荐指数：★★★★★</span><span class="l2">保本:是</span><span class="l3">委托：12个月</span> </div>
-											</div>贵金属理财四号</li>
+									<li>
+										<div>
+											<img src="img/lc-img/bg_0101_item12.png" />
+											<div><span class="l1">推荐指数：★★★★★</span><span class="l2">保本:是</span><span class="l3">委托：12个月</span> </div>
+										</div>贵金属理财三号</li>
+									<li>
+										<div>
+											<img src="img/lc-img/bg_0101_item13.png" />
+											<div><span class="l1">推荐指数：★★★★★</span><span class="l2">保本:是</span><span class="l3">委托：12个月</span> </div>
+										</div>贵金属理财四号</li>
 								</ul>
 							</div>
 						</div>
 					</div>
 					<div class="wrap tx-menu">
+						<div class="homePage" style="text-align: center;">
+							<!--<div class="nivo-slider-wrapper  theme-light" style="padding:10px;">
+								<div id="nivoSlider" class="nivoSlider">
+									<img class="imggg" src="img/ad/images/1382100294249300335532.jpg" />
+									<img src="img/ad/images/13820934019981841720519.jpg" />
+									<img src="img/ad/images/13820933451601940983121.jpg" />
+									<img src="img/ad/images/13820935369811607063401.jpg" />
+								</div>
+							</div>-->
+								<img src="img/ad/images/13820934019981841720519.jpg" />
+						</div>
 
-						<ul>
-							<li data-url="file:///android_asset/tx/business/c-business.html">
-								<img src="img/tx-icon/ebank.png" />公司业务
-								<li data-url="file:///android_asset/tx/business/saving-business.html">
-									<img src="img/tx-icon/regec.png" />储蓄业务
+						<ul style="text-align: center;">
+							<li data-url="file:///android_asset/tx/business/saving-business.html">
+								<img src="img/tx-icon/regec.png" />储蓄业务
+								<li data-url="file:///android_asset/tx/business/c-business.html">
+									<img src="img/tx-icon/ebank.png" />公司业务
 									<li data-url="file:///android_asset/tx/business/persion-business-loan.html">
 										<img src="img/tx-icon/cpay.png" />个人贷款
-												<li data-url="file:///android_asset/tx/business/agriculture-business.html">
-										<img src="img/tx-icon/chgpwd.png" />三农贷款
-												<li data-url="file:///android_asset/tx/business/smal-business-loan.html">
-										<img src="img/tx-icon/smallCompany.jpg" />小微企业贷款
+										<li data-url="file:///android_asset/tx/business/agriculture-business.html">
+											<img src="img/tx-icon/chgpwd.png" />三农贷款
+											<li data-url="file:///android_asset/tx/business/smal-business-loan.html">
+												<img src="img/tx-icon/smallCompany.jpg" />小微企业贷款
 												<li data-url="file:///android_asset/tx/business/abroad-business.html">
-										<img src="img/tx-icon/manager.png" />出国金融业务
-										<li data-url="file:///android_asset/tx/business/ebank-business.html">
-										<img src="img/tx-icon/sbactive.png" />电子银行
-													<li data-url="file:///android_asset/tx/business/card-business.html">
-										<img src="img/tx-icon/yhkyw.png" />银行卡
-										<!--<li data-url="file:///android_asset/tx/sscact/sscact.html"><img src="img/tx-icon/sbactive.png"  />金融社保卡激活
-							<li data-url="file:///android_asset/tx/debitopen/debitOpen.html"><img src="img/tx-icon/newcard.png"  />借记卡开卡
-							<li data-url="file:///android_asset/tx/channelreg/channelreg.html"><img src="img/tx-icon/regec.png"  />注册电子渠道
-							<li data-url="file:///android_asset/form-test.html"><img src="img/tx-icon/cpay.png"  />汇总激费
-							<li data-type="DIR" data-url="file:///android_asset/query.html"><img src="img/tx-icon/query.png"  />查询-->
-										<!--<li data-type="DIR" data-url="file:///android_asset/bankcard.html"><img src="img/tx-icon/yhkyw.png"  />银行卡业务
-							<li data-type="DIR" data-url="file:///android_asset/netbank.html"><img src="img/tx-icon/ebank.png"  />电子银行
-							<li data-url="file:///android_asset/form-test.html"><img src="img/tx-icon/manager.png"  />管理
-							<li data-url="file:///android_asset/form-test.html"><img src="img/tx-icon/sbactive.png"  />金融社保卡解冻
-							<li data-url="file:///android_asset/tx/txdemo/step01.html"><img src="img/HBuilder.png"  />多页面交易DEMO
-							<li data-url="file:///android_asset/tx/tx-inset-page-demo/tx-main.html"><img src="img/HBuilder.png" />单页面交易DEMO	
-							<li data-url="file:///android_asset/tx/echars-demo/demo01.html"><img src="img/HBuilder.png" />图表测试
-							<li data-url="apps://"><img src="img/HBuilder.png" />系统APP
-							<li data-url="file:///android_asset/test/read-idcard.html"><img src="img/HBuilder.png" />接口测试-->
+													<img src="img/tx-icon/manager.png" />出国金融业务
+													<li data-url="file:///android_asset/tx/business/ebank-business.html">
+														<img src="img/tx-icon/sbactive.png" />电子银行
+														<li data-url="file:///android_asset/tx/business/card-business.html">
+															<img src="img/tx-icon/yhkyw.png" />银行卡
 						</ul>
 					</div>
-							<!--<div class="wrap tx-menu" style="text-align: center;">
-
-						<ul>
+					<div class="wrap tx-menu" style="text-align: center;">
+					<div class="homePage" style="text-align: center;">
+								<img img src="img/ad/images/13820933451601940983121.jpg"/>
+						</div>
+						<ul style="text-align: center;" >
 							<li >
-								<img src="img/tx-icon/yhkyw.png" />银行卡
+								<img src="img/tx-icon/manager.png" />业务更新
+										<li >
+								<img src="img/tx-icon/yhkyw.png" />理财产品更新
 						</ul>
-					</div>-->
+					</div>
 				</div>
 			</div>
 		</div>
@@ -326,7 +331,7 @@ a.nivo-prevNav {left:15px;}
 					<img src="img/bnt-split.png" />
 				</div>
 				<div index="1" class="barBtn">
-					<img src="img/icon-lccp.png" /><span>理材产品</span>
+					<img src="img/icon-lccp.png" /><span>投资理材</span>
 				</div>
 				<div id="barSplit">
 					<img src="img/bnt-split.png" />
@@ -334,10 +339,10 @@ a.nivo-prevNav {left:15px;}
 				<div index="2" class="barBtn">
 					<img src="img/icon-ywbl.png" /><span>业务介绍</span>
 				</div>
-				<!--<div index="3" class="barBtn"><img src="img/icon-xqfx.png" /><span>系统设置</span></div>-->
-			<!--</div>-->
-		</div>
-		<!--<div class="NavButtonBar">
+				<div index="3" class="barBtn"><img src="img/icon-xqfx.png" /><span>系统设置</span></div>
+				</div>
+			</div>
+			<!--<div class="NavButtonBar">
 			<button class="pre"></button>
 			<button class="next"></button>
 		</div>-->
