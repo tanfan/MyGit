@@ -17,7 +17,8 @@
 		<!--<link rel="stylesheet" href="nivo-slider/themes/light/light.css" type="text/css" media="screen" />-->
 		<!--<link rel="stylesheet" href="nivo-slider/themes/dark/dark.css" type="text/css" media="screen" />-->
 		<!--<link rel="stylesheet" href="nivo-slider/themes/bar/bar.css" type="text/css" media="screen" />-->
-		<link rel="stylesheet" href="nivo-slider/nivo-slider.css" type="text/css" media="screen" />
+		<!--<link rel="stylesheet" href="nivo-slider/nivo-slider.css" type="text/css" media="screen" />-->
+		<link rel="stylesheet" href="css/nivo-slider.css" type="text/css" media="screen" />
 
 		<script type="text/javascript" src="script/jquery-1.8.3.js"></script>
 
@@ -31,8 +32,20 @@
 		<script type="text/javascript" src="script/iscroll/iscroll.js"></script>
 		<script type="text/javascript" src="script/jquery.nivo.slider.pack.js"></script>
 		<style type="text/css">
-			/*#nivoSlider{width:960px; height:250px;background:url(img/ad/images/loading.gif) no-repeat 50% 50%;}*/
+			#nivoSlider{width:1000px; height:300px;}
 			#nivoSlider img {position:absolute;top:0px;left:0px;display:none;}
+			.nivo-controlNav{position:absolute;;left:950px;margin-top: -40px}
+			.nivo-controlNav a {display:block;width:22px;height:22px;background:url(img/ad/images/bullets.png) no-repeat;text-indent:-9999px;border:0;;float:left;}
+			.nivo-controlNav a.active {background-position:0 -22px;}
+			.nivo-directionNav a {display:block;width:30px;height:30px;background:url(img/ad/images/arrows.png) no-repeat;text-indent:-9999px;border:0;}
+			a.nivo-nextNav {background-position:-30px 0;right:15px;}
+			a.nivo-prevNav {left:15px;}
+			.nivo-caption {text-shadow:none; font-family: Helvetica, Arial, sans-serif;}
+			.nivo-caption a {color:#efe9d1;text-decoration:underline;}
+		</style>
+		<!--<style type="text/css">
+			#sliderNivo{width:960px; height:250px;background:url(img/ad/images/loading.gif) no-repeat 50% 50%;}
+			#sliderNivo img {position:absolute;top:0px;left:0px;display:none;}
 			.nivo-controlNav{position:absolute;;left:900px;margin-top: -50px}
 			.nivo-controlNav a {display:block;width:22px;height:22px;background:url(img/ad/images/bullets.png) no-repeat;text-indent:-9999px;border:0;;float:left;}
 			.nivo-controlNav a.active {background-position:0 -22px;}
@@ -42,15 +55,25 @@
 			.nivo-caption {text-shadow:none; font-family: Helvetica, Arial, sans-serif;}
 			.nivo-caption a {color:#efe9d1;text-decoration:underline;}
 		</style>
-		<script type="text/javascript">
+				<script type="text/javascript">
 $(function() {
-    $('#nivoSlider').nivoSlider({
+    $('#sliderNivo').nivoSlider({
         effect:'slideInLeft' ,// Specify sets like: 'fold,fade,sliceDown'
         manualAdvance:false,
         pauseOnHover:true
     });
 });
-</script>
+</script>-->
+		<script type="text/javascript">
+			$(function() {
+			    $('#nivoSlider').nivoSlider({
+			        effect:'slideInLeft' ,// Specify sets like: 'fold,fade,sliceDown'
+			        manualAdvance:false,
+			        pauseOnHover:true,
+			        pauseTime:3000
+			    });
+			});
+		</script>
 		<script type="text/javascript">
 			$(function() {
 				var hammer = new Hammer(document.body, {
@@ -67,56 +90,56 @@ $(function() {
 
 		<script type="text/javascript" src="nivo-slider/jquery.nivo.slider.js"></script>
 		<script type="text/javascript">
-//			$(function() {
-////							$('#nivoSlider').nivoSlider();
-//								$('#nivoSlider').next();
-//						});
-
-			$(function() {
-
-				setTimeout(function() {
-					var myscroll = new IScroll("#firstWrap", {
-						hScroll: false,
-						vScroll: true,
-						hScrollbar: false,
-						vScrollbar: false
-					});
-					var myscroll2 = new IScroll("#lc_menu", {
-						hScroll: false,
-						vScroll: true,
-						hScrollbar: false,
-						vScrollbar: false
-					});
-					$(window).resize(function() {
-						setTimeout(function() {
-							myscroll.destroy();
-							myscroll2.destroy();
-							myscroll = new IScroll("#firstWrap", {
-								hScroll: false,
-								vScroll: true,
-								hScrollbar: false,
-								vScrollbar: false
-							});
-							myscroll2 = new IScroll("#lc_menu", {
-								hScroll: false,
-								vScroll: true,
-								hScrollbar: false,
-								vScrollbar: false
-							});
-
-							/*myscroll.refresh();
-							myscroll2.refresh();*/
-						}, 500);
-
-					});
-				}, 500);
-			});
+			//			$(function() {
+			////							$('#nivoSlider').nivoSlider();
+			//								$('#nivoSlider').next();
+			//						});
+			
+						$(function() {
+			
+							setTimeout(function() {
+								var myscroll = new IScroll("#firstWrap", {
+									hScroll: false,
+									vScroll: true,
+									hScrollbar: false,
+									vScrollbar: false
+								});
+								var myscroll2 = new IScroll("#lc_menu", {
+									hScroll: false,
+									vScroll: true,
+									hScrollbar: false,
+									vScrollbar: false
+								});
+								$(window).resize(function() {
+									setTimeout(function() {
+										myscroll.destroy();
+										myscroll2.destroy();
+										myscroll = new IScroll("#firstWrap", {
+											hScroll: false,
+											vScroll: true,
+											hScrollbar: false,
+											vScrollbar: false
+										});
+										myscroll2 = new IScroll("#lc_menu", {
+											hScroll: false,
+											vScroll: true,
+											hScrollbar: false,
+											vScrollbar: false
+										});
+			
+										/*myscroll.refresh();
+										myscroll2.refresh();*/
+									}, 500);
+			
+								});
+							}, 500);
+						});
 		</script>
 	</head>
 
-	<body scroll=no style="overflow:hidden">
+	<body scroll="no">
 		<div class="header">
-			<img src="img/logo.png" style="margin:18px 0px auto 20px;" />
+			<img src="img/logo.png" style="margin:30px 0px auto 20px;" height="40px" />
 			<div>
 				<!--<div id="btnLogin">
 					<img src="img/icon-login.png" /><span>登录</span>
@@ -140,23 +163,21 @@ $(function() {
 							</div>
 							<div class="h-tx-menu">
 								<ul style="text-align: center;vertical-align:middle;height:100%;">
-									<li data-url="file:///android_asset/tx/ManageM/Manage.html" index="1">
+									<li data-url="file:///android_asset/tx/ManageM/ManageM01.html" index="1">
 										<img src="img/lc-img/bg_0101_item1.png" />致富理财
 										<li data-url="file:///android_asset/tx/ManageM/ManageM02.html">
 											<img src="img/lc-img/bg_0101_item3.png" />安想理财
 											<li data-url="file:///android_asset/tx/ManageM/ManageM03.html">
 												<img src="img/lc-img/bg_0101_item2.png" />贵金属一号
-												<li data-url="file:///android_asset/tx/business/c-business.html">
-													<img src="img/tx-icon/cpay.png" />公司业务
-													<li data-url="file:///android_asset/tx/business/card-business.html">
-														<img src="img/tx-icon/regec.png" />银行卡
-														<li data-url="file:///android_asset/tx/business/persion-business-loan.html">
-															<img src="img/tx-icon/cpay.png" />个人贷款
-															<li data-url="file:///android_asset/tx/business/agriculture-business.html">
-																<img src="img/tx-icon/ebank.png" />三农贷款
-																<li data-url="file:///android_asset/tx/business/ebank-business.html">
-																	<img src="img/tx-icon/yhkyw.png" />电子银行
-																	<!--<li data-url="file:///android_asset/form-test.html"><img src="img/tx-icon/yhkyw.png"  />理财产品购买
+												<li data-url="file:///android_asset/tx/business/card-business.html" data-type="bus">
+													<img src="img/tx-icon/regec.png" />银行卡
+													<li data-url="file:///android_asset/tx/business/persion-business-loan.html" data-type="bus">
+														<img src="img/tx-icon/cpay.png" />个人贷款
+														<li data-url="file:///android_asset/tx/business/agriculture-business.html" data-type="bus">
+															<img src="img/tx-icon/chgpwd.png" />三农贷款
+															<li data-url="file:///android_asset/tx/business/ebank-business.html" data-type="bus">
+																<img src="img/tx-icon/sbactive.png" />电子银行
+																<!--<li data-url="file:///android_asset/form-test.html"><img src="img/tx-icon/yhkyw.png"  />理财产品购买
 								<li data-url="file:///android_asset/form-test.html"><img src="img/tx-icon/manager.png"  />客户
 								<li data-type="DIR" data-url="file:///android_asset/query.html"><img src="img/tx-icon/regec.png"  />我的任务
 								<li data-type="DIR" data-url="file:///android_asset/bankcard.html"><img src="img/HBuilder.png"  />消息中心
@@ -193,7 +214,7 @@ $(function() {
 						<div class="lc-menu">
 							<div class="manage">理财产品
 								<ul>
-									<li data-url="file:///android_asset/tx/ManageM/Manage.html" index="1">
+									<li data-url="file:///android_asset/tx/ManageM/ManageM01.html" index="1">
 										<div>
 											<img src="img/lc-img/bg_0101_item1.png" />
 											<div><span class="l1">推荐指数：★★★★★</span><span class="l2">保本:是</span><span class="l3">委托：12个月</span> </div>
@@ -280,7 +301,7 @@ $(function() {
 									<img src="img/ad/images/13820935369811607063401.jpg" />
 								</div>
 							</div>-->
-								<img src="img/ad/images/13820934019981841720519.jpg" />
+							<img src="img/ad/images/13820934019981841720519.jpg" style="margin-top: 10px;" />
 						</div>
 
 						<ul style="text-align: center;">
@@ -303,14 +324,21 @@ $(function() {
 						</ul>
 					</div>
 					<div class="wrap tx-menu" style="text-align: center;">
-					<div class="homePage" style="text-align: center;">
-								<img img src="img/ad/images/13820933451601940983121.jpg"/>
+						<div class="homePage" style="text-align: center;margin-top: 10px;">
+
+							<img img src="img/ad/images/13820933451601940983121.jpg" />
 						</div>
-						<ul style="text-align: center;" >
-							<li >
-								<img src="img/tx-icon/manager.png" />业务更新
-										<li >
-								<img src="img/tx-icon/yhkyw.png" />理财产品更新
+						<!--<div id="sliderNivo" class="nivoSlider">
+										<img class="imggg" src="img/ad/images/1382100294249300335532.jpg" />
+										<img src="img/ad/images/13820934019981841720519.jpg" />
+										<img src="img/ad/images/13820933451601940983121.jpg" />
+										<img src="img/ad/images/13820935369811607063401.jpg" />
+									</div>-->
+						<ul style="text-align: center;">
+							<li>
+								<img src="img/tx-icon/l_updata.png" />理财更新
+								<li>
+									<img src="img/tx-icon/y_updata.png" />业务
 						</ul>
 					</div>
 				</div>
@@ -322,14 +350,15 @@ $(function() {
 					<img src="img/icon-home.png" />首页</span>
 				</div>
 				<div id="barSplit">
+					<!--<div><span style="background:grey;">1</span></div>-->
 					<img src="img/bnt-split.png" />
 				</div>
 				<!--<div index="1" class="barBtn">
 					<img src="img/icon-xqfx.png" /><span>需求分析</span>
 				</div>-->
-				<div id="barSplit">
+				<!--<div id="barSplit">
 					<img src="img/bnt-split.png" />
-				</div>
+				</div>-->
 				<div index="1" class="barBtn">
 					<img src="img/icon-lccp.png" /><span>投资理材</span>
 				</div>
@@ -339,10 +368,15 @@ $(function() {
 				<div index="2" class="barBtn">
 					<img src="img/icon-ywbl.png" /><span>业务介绍</span>
 				</div>
-				<div index="3" class="barBtn"><img src="img/icon-xqfx.png" /><span>系统设置</span></div>
+				<div id="barSplit">
+					<img src="img/bnt-split.png" />
+				</div>
+				<div index="3" class="barBtn">
+					<img src="img/icon-xqfx.png" /><span>系统设置</span>
 				</div>
 			</div>
-			<!--<div class="NavButtonBar">
+		</div>
+		<!--<div class="NavButtonBar">
 			<button class="pre"></button>
 			<button class="next"></button>
 		</div>-->

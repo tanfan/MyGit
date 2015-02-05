@@ -10,14 +10,18 @@ body{
 	margin: 0px;
 	overflow: hidden;
 	background-image: url(../img/back.png);
+			/*background:#CFE9F7;*/
+				/*background:#16AA5E;*/
 	background-size: 1280px 1024px;
 }
-@media only screen and (max-width: 1280px) {
+/*@media only screen and (max-width: 1280px) {*/
 		
 	.header {
 		width: 100%;
 		height: 97px;
-		background-image:url(../img/top-bg.png);
+			background-image:url(../img/top-bg.png);
+				/*background: #6790AF;*/
+				/*background: #19C26B;*/
 		background-repeat: repeat-x;
 	}
 	.header > div{
@@ -50,7 +54,9 @@ body{
 	.menu{
 		width: 100%;
 		height: 77px;
-		background-image: url(../img/bottomBar-bg.png);
+		/*background-image: url(../img/bottomBar-bg.png);*/
+		background: #6790AF;
+				/*background: #133985;*/
 		background-repeat: repeat-x;
 		text-align: center;
 	}
@@ -83,10 +89,10 @@ body{
 		width: 2px;
 	}
 	.menu > div > div.barBtn:active{
-		background-image: url(../img/btn-bg-active.png);
+		/*background-image: url(../img/btn-bg-active.png);*/
 		background-position-y: -80px;
 		background-size:160px 163px;
-		box-shadow: 0px 0px 20px #ff59b0;
+		/*box-shadow: 0px 0px 20px #ff59b0;*/
 	}
 	
 	
@@ -100,7 +106,7 @@ body{
 		background-image: url(../img/btn-bg-active.png);
 		background-position-y: -80px;
 		background-size:160px 163px;
-	 	box-shadow: 0px 0px 20px #ff59b0;
+	 	/*box-shadow: 0px 0px 20px #ff59b0;*/
 		
 	}
 	
@@ -134,9 +140,9 @@ body{
 		width: 60%;
 		height: 200px;
 	}*/
-}
+/*}*/
 		
-@media only screen and (max-width: 800px) {
+/*@media only screen and (max-width: 800px) {
 	.header{
 		width: 100%;
 		height: 97px;
@@ -165,10 +171,6 @@ body{
 	}
 	.content{
 		width: 100%;
-	/*	height: -moz-calc(100% - 100px - 100px);
-		height: -webkit-calc(100% - 100px - 100px);*/
-		/*height: calc(100% - 100px - 100px);*/
-		/*height:760px;*/
 	}
 		
 	.menu{
@@ -205,7 +207,7 @@ body{
 	}
 	
 	.menu > div > div.barBtn:active{
-		 background-image: url(../img/btn-bg-active.png);  
+		background-image: url(../img/btn-bg-active.png);  
 	    background-position-y: -80px;
 	    background-size:100px 163px;
 	    box-shadow: 0px 0px 20px #ff59b0;
@@ -237,19 +239,9 @@ body{
 	.swipe-wrap > .wrap> div  > div.homePage img{
 		max-width: 580px;
 	}
-	
-/*	.nivo-slider-wrapper {
-		width: 95%;
-		height: 200px;
-		margin: 10px;
-		display: inline-block;
-		overflow: hidden;
 	}
-	.nivo-slider-wrapper img{
-		width: 60%;
-		height: 200px;
-	}*/
-}
+	*/
+
 
 
 /*菜单*/

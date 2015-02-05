@@ -16,8 +16,8 @@ $(function() {
 $(function() {
 	$(".manage  ul > li").click(function() {
 		if ($(this).attr("data-url") != null) {
-			 var url="file:///android_asset/tx/ManageM/Manage.html?"+"index="+$(this).attr("index");
-			rexseePopupWindow.show(url, 'browser-progress-dialog:hidden;window-moveable:false;window-cancelable:true;window-modeless:false;window-dim-amount:1;window-style:transparent;window-animation:right;border-width:0px;window-align:center;window-vertical-align:middle;width:fillparent;height:fillparent;');
+			 var url=$(this).attr("data-url")+"?index="+$(this).attr("index");
+			rexseePopupWindow.show(url, 'browser-progress-dialog:visible;window-moveable:false;window-cancelable:true;window-modeless:false;window-dim-amount:1;window-style:transparent;window-animation:right;border-width:0px;window-align:center;window-vertical-align:middle;width:fillparent;height:fillparent;');
 //			rexseePopupWindow.show($(this).attr("data-url"), 'browser-progress-dialog:hidden;window-moveable:false;window-cancelable:false;window-modeless:false;window-dim-amount:1;window-style:transparent;window-animation:right;border-width:0px;window-align:center;window-vertical-align:middle;width:fillparent;height:fillparent;');
 		}
 //		else if ($(this).attr("data-type")=="DIR" && $(this).attr("data-url") != null){
@@ -36,9 +36,9 @@ $(function() {
 $(function() {
 	$(".fund  ul > li").click(function() {
 		if ($(this).attr("data-type")!="DIR" && $(this).attr("data-url") != null) {
-			rexseePopupWindow.show($(this).attr("data-url"), 'browser-progress-dialog:hidden;window-moveable:false;window-cancelable:true;window-modeless:false;window-dim-amount:1;window-style:transparent;window-animation:right;border-width:0px;window-align:center;window-vertical-align:middle;width:fillparent;height:fillparent;');
+			rexseePopupWindow.show($(this).attr("data-url"), 'browser-progress-dialog:visible;window-moveable:false;window-cancelable:true;window-modeless:false;window-dim-amount:1;window-style:transparent;window-animation:right;border-width:0px;window-align:center;window-vertical-align:middle;width:fillparent;height:fillparent;');
 		}else if ($(this).attr("data-type")=="DIR" && $(this).attr("data-url") != null){
-			rexseePopupWindow.show($(this).attr("data-url"), 'browser-progress-dialog:hidden;window-moveable:false;window-cancelable:true;window-outside-cancelable:true;window-modeless:false;window-dim-amount:0.5;window-style:light;window-animation:center;border-width:0;window-align:center;window-vertical-align:middle;width:520;height:480;');
+			rexseePopupWindow.show($(this).attr("data-url"), 'browser-progress-dialog:visible;window-moveable:false;window-cancelable:true;window-outside-cancelable:true;window-modeless:false;window-dim-amount:0.5;window-style:light;window-animation:center;border-width:0;window-align:center;window-vertical-align:middle;width:520;height:480;');
 
 		}
 				else {
@@ -53,9 +53,9 @@ $(function() {
 $(function() {
 	$(".Noblemetal  ul > li").click(function() {
 		if ($(this).attr("data-type")!="DIR" && $(this).attr("data-url") != null) {
-			rexseePopupWindow.show($(this).attr("data-url"), 'browser-progress-dialog:hidden;window-moveable:false;window-cancelable:true;window-modeless:false;window-dim-amount:1;window-style:transparent;window-animation:right;border-width:0px;window-align:center;window-vertical-align:middle;width:fillparent;height:fillparent;');
+			rexseePopupWindow.show($(this).attr("data-url"), 'browser-progress-dialog:visible;window-moveable:false;window-cancelable:true;window-modeless:false;window-dim-amount:1;window-style:transparent;window-animation:right;border-width:0px;window-align:center;window-vertical-align:middle;width:fillparent;height:fillparent;');
 		}else if ($(this).attr("data-type")=="DIR" && $(this).attr("data-url") != null){
-			rexseePopupWindow.show($(this).attr("data-url"), 'browser-progress-dialog:hidden;window-moveable:false;window-cancelable:true;window-outside-cancelable:true;window-modeless:false;window-dim-amount:0.5;window-style:light;window-animation:center;border-width:0;window-align:center;window-vertical-align:middle;width:520;height:480;');
+			rexseePopupWindow.show($(this).attr("data-url"), 'browser-progress-dialog:visible;window-moveable:false;window-cancelable:true;window-outside-cancelable:true;window-modeless:false;window-dim-amount:0.5;window-style:light;window-animation:center;border-width:0;window-align:center;window-vertical-align:middle;width:520;height:480;');
 
 		}
 				else {
@@ -83,7 +83,11 @@ $(function(){
  */
 $(function(){
 	$(".h-tx-menu > ul > li").click(function(){
-		if ($(this).attr("data-url") != null) {
+		if ($(this).attr("data-url") != null&&$(this).attr("data-type") != null) {
+			 var url=$(this).attr("data-url")+"?index="+$(this).attr("index");
+			rexseePopupWindow.show(url, 'browser-progress-dialog:hidden;window-moveable:false;window-cancelable:true;window-modeless:false;window-dim-amount:1;window-style:transparent;background-color:blue;window-animation:right;border-width:0px;window-align:center;window-vertical-align:middle;width:fillparent;height:fillparent;');
+		}
+		else{
 			 var url=$(this).attr("data-url")+"?index="+$(this).attr("index");
 			rexseePopupWindow.show(url, 'browser-progress-dialog:visible;window-moveable:false;window-cancelable:true;window-modeless:false;window-dim-amount:1;window-style:transparent;background-color:blue;window-animation:right;border-width:0px;window-align:center;window-vertical-align:middle;width:fillparent;height:fillparent;');
 		}

@@ -29,6 +29,14 @@ var index = loc.substr(n2+1, n1-n2);//从=号后面的内容
 			$(".iframe").attr("src",$(this).attr("data-url"));
 		}
 	});
+							$('.tableTime li').(function() {
+		$(this).css("color", "#FFFFFF"); //还原所有td的颜色
+		$('.tableTime li').not(this).css("color", "black");
+			if ($(this).attr("data-url") != null) {
+			$(".iframe").attr("src",$(this).attr("data-url"));
+		}
+	});
+		
 			});
 		</script>
 		<title></title>
@@ -54,10 +62,10 @@ var index = loc.substr(n2+1, n1-n2);//从=号后面的内容
 											<li data-url="file:///android_asset/tx/ManageM/ManageM01.html" style="color: #FFFFFF;font-size:23px;">
 											致富理财
 										</li>
-											<li data-url="file:///android_asset/tx/ManageM/ManageM02.html" style="color: black;font-size:23px;">
+											<li  style="color: black;font-size:23px;">
 											安详人民币
 										</li>
-											<li data-url="file:///android_asset/tx/ManageM/ManageM03.html" style="color: black;font-size:23px;">
+											<li style="color: black;font-size:23px;">
 											贵金属理财一号
 										</li>
 									

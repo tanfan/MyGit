@@ -1,4 +1,4 @@
-@media only screen and (max-width: 1280px) {
+/*@media only screen and (max-width: 1280px) {*/
 .h-tx-menu{
 		width: 100%;
 		height: 100%;
@@ -22,7 +22,7 @@
 	font-weight: bold;
 	-webkit-border-radius: 20px;
 }
-}
+/*}*/
 @media only screen and (max-width: 800px) {
 	.h-tx-menu> ul{
 		list-style: none;
